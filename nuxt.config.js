@@ -14,9 +14,22 @@ export default {
 				content: 'width=device-width, initial-scale=1'
 			},
 			{
+				name: 'theme-color',
+				content: '#37474f'
+			},
+			{
+				name: 'X-UA-Compatible',
+				content: 'ie=edge'
+			},
+			{
 				hid: 'description',
 				name: 'description',
 				content: process.env.npm_package_description || ''
+			},
+			{
+				hid: 'keywords',
+				name: 'keywords',
+				content: 'carlosarroyoam, Carlos Arroyo, Carlos Alberto Arroyo Martínez, Blog Programacion, Desarrollo Web, Diseño Web, Desarrollo Web Querétaro, Diseño Web Querétaro, Paginas web Querétaro, Ingeniero en Informatica'
 			}
 		],
 		link: [
