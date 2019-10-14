@@ -1,0 +1,59 @@
+////
+// Root variables
+// SCSS variables aren't availible on single vue page components
+//
+:root {
+  @each $color, $value in $grays {
+    --gray-#{$color}: #{$value};
+  }
+}
+
+////
+// 1. The size of the fixed header
+// 2. The size of the bottom
+//
+html {
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+  padding-top: 5.5em; // 1
+  padding-bottom: 5em; // 2
+  font-size: 14px;
+  font-family: $font-family-sans-serif;
+  color: $gray-900;
+}
+
+// Scrollbar styles
+::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.4em;
+}
+
+::-webkit-scrollbar-track {
+  background: $gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray-500;
+  border-radius: 0;
+}
+
+////
+// Device = Big resolution desktops
+// Screen = 1920px to higher resolution desktops
+//
+@media only screen and (min-width: 1920px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+////
+// Device = Small Screen Smartphones Mobiles (Portrait)
+// Screen = Less than 320px
+//
+@media only screen and (max-width: 330px) {
+  html {
+    font-size: 13px;
+  }
+}

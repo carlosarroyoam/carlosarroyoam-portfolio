@@ -1,0 +1,29 @@
+{
+	"name": "carlosarroyoam-portfolio",
+	"version": "1.0.0",
+	"description": "Hola, mi nombre es Carlos, soy un Ingeniero en Informática, egresado del ITSUR. Apasionado por el desarrollo de aplicaciones web y móviles, la tecnología y los videojuegos. Cuento con conocimientos en diversas tecnologías web y móviles, bases de datos relacionales y alguno que otro Framework. Tengo 24 años y actualmente radico en la cuidad de Apaseo el Alto, Guanajuato.",
+	"author": "carlosarroyoam",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"generate": "nuxt generate",
+		"deploy": "nuxt generate && cd dist && git init && git add --all && git commit -m \"Deploy\" && git remote add origin https://github.com/carlosarroyoam/carlosarroyoam.github.io.git && git push origin master --force"
+	},
+	"dependencies": {
+		"@nuxtjs/axios": "^5.3.6",
+		"bootstrap": "^4.3.1",
+		"jquery": "^3.4.1",
+		"nuxt": "^2.0.0",
+		"nuxt-i18n": "^6.3.0",
+		"popper.js": "^1.15.0"
+	},
+	"devDependencies": {
+		"eslint": "^6.5.1",
+		"node-sass": "^4.12.0",
+		"sass-loader": "^8.0.0",
+		"style-loader": "^1.0.0",
+		"vue-template-compiler": "^2.6.10"
+	}
+}
