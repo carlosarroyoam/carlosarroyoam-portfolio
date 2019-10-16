@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-sm-12 mt-3 mx-auto">
+			<div class="col-sm-12 col-xl-10 mt-3 mx-auto">
 				<div class="projects">
 					<!-- <ProjectItem /> -->
 				</div>

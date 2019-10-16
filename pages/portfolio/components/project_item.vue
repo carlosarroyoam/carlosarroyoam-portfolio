@@ -28,11 +28,13 @@ export default {
 	margin: 1em;
 	flex: 0 1 calc(33.33% - 2em);
 	background-color: var(--color-dark);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	transition-duration: 150ms;
+	transition-property: box-shadow;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
 .project:hover {
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
 }
 
 .project .project__image {
@@ -41,17 +43,16 @@ export default {
 }
 
 .proyect__description {
-	background-color: var(--color-light);
+	background-color: var(--white);
 	padding: 1em;
 }
 
 .technology__badge {
-	padding: 0 1em;
+	padding: 0.1em 0.8em;
 	border-radius: 0.9em;
-	background-color: var(--color-secondary);
-	color: var(--color-secondary-contrast);
+	background-color: var(--primary);
+	color: var(--white);
 	font-size: 0.8rem;
-	font-weight: bold;
 }
 
 @media only screen and (max-width: 991px) {

@@ -48,12 +48,6 @@ export default {
 	},
 	router: {
 		linkActiveClass: 'active',
-		extendRoutes(routes, resolve) {
-			routes.push({
-				path: '/',
-				component: resolve(__dirname, 'pages/aboutme/index.vue')
-			})
-		}
 	},
 	/*
 	 ** Customize the progress-bar color
@@ -87,10 +81,14 @@ export default {
 		fallbackLocale: 'en',
 		lazy: true,
 		langDir: 'lang/',
-		strategy: 'prefix_and_default',
+		strategy: 'prefix',
 		detectBrowserLanguage: {
 			useCookie: true,
 			cookieKey: 'i18n_redirected'
+		},
+		parsePages: false,
+		pages: {
+			index: false
 		}
 	},
 	/*
