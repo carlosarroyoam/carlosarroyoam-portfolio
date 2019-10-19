@@ -1,7 +1,7 @@
 <template>
 	<div class="jumbotron text-md-center shadow-sm">
 		<div class="row">
-			<div class="col-sm-12 col-md-10 col-lg-9 mt-5 mx-auto">
+			<div class="col-sm-12 col-md-10 col-lg-8 mt-5 mx-auto">
 				<h1 class="display-1 mt-5 mb-1 text-white text-uppercase">Carlos Alberto Arroyo Martínez</h1>
 				<h1 class="display-2 text-light text-uppercase">SOFTWARE DEVELOPER</h1>
 
@@ -11,8 +11,9 @@
 					tecnologías web y móviles, bases de datos relacionales y alguno que otro Framework web. Tengo 24 años y actualmente radico en la cuidad de Apaseo el Alto, Guanajuato.
 				</p>
 			</div>
-
-			<div class="col-sm-12 col-md-5 col-lg-4 text-center mt-5 mx-auto">
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-md-5 col-lg-4 col-xl-3 text-center mt-5 mx-auto">
 				<nuxt-link :to="localePath({ name: 'portfolio' })" tag="a" class="text-decoration-none">
 					<button type="button" class="btn btn-primary btn-block text-uppercase px-4 shadow-sm">
 						{{ $t('nav_links.portfolio') }}

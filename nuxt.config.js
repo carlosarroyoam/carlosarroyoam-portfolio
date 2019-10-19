@@ -29,7 +29,7 @@ export default {
 			{
 				hid: 'keywords',
 				name: 'keywords',
-				content: 'carlosarroyoam, Carlos Arroyo, Carlos Alberto Arroyo Martínez, Blog Programacion, Desarrollo Web, Diseño Web, Desarrollo Web Querétaro, Diseño Web Querétaro, Paginas web Querétaro, Ingeniero en Informatica'
+				content: 'carlosarroyoam, Carlos Arroyo, Carlos Alberto Arroyo Martínez, Blog Programacion, Desarrollo Web Querétaro, Diseño Web Querétaro, Desarrollo Web Querétaro, Diseño Web Querétaro, Paginas web Querétaro, Ingeniero en Informatica Querétaro'
 			}
 		],
 		link: [
@@ -58,7 +58,9 @@ export default {
 	/*
 	 ** Global CSS
 	 */
-	css: [],
+	css: [
+		'~/assets/scss/styles.scss'
+	],
 	/*
 	 ** Plugins to load before mounting the App
 	 */
@@ -104,5 +106,9 @@ export default {
 		 ** You can extend webpack config here
 		 */
 		extend(config, ctx) { }
+	},
+	generate: {
+		fallback: '404.html',
+		fallback: true
 	}
 };

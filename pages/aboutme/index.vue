@@ -18,13 +18,13 @@
 				</div>
 			</div>
 
-			<div class="row mt-3 mx-md-auto px-3 py-5 bg-secondary shadow-sm">
-				<div class="col-sm-12 col-md-8 col-lg-6 my-auto mx-auto mr-lg-0">
-					<h2 class="m-0 text-center text-md-left text-uppercase text-white">Trabajemos JUNTOS en uN <span class="text-primary">proyecto INCREÍBLE</span></h2>
+			<div class="row mt-3 mx-2 mx-md-3 mx-lg-4 mx-xl-5 px-3 py-5 bg-secondary shadow-sm">
+				<div class="col-sm-12 col-md-7 col-lg-6 my-auto mx-auto mr-xl-3">
+					<h2 class="m-0 text-center text-uppercase text-white custom-line-height">Trabajemos JUNTOS en <span class="text-primary">proyectos INCREÍBLEs</span></h2>
 				</div>
-				<div class="col-sm-12 col-md-4 col-lg-4 my-auto mx-auto ml-lg-0">
+				<div class="col-sm-12 col-md-5 col-lg-4 my-auto mx-auto">
 					<nuxt-link :to="localePath({ name: 'contactme' })" tag="a" class="text-decoration-none">
-						<button type="button" class="btn btn-outline-primary btn-lg btn-block text-uppercase text-white mt-3 mt-md-0 px-4">
+						<button type="button" class="btn btn-primary btn-lg btn-block text-uppercase text-white mt-3 mt-md-0 px-4">
 							{{ $t('nav_links.contact_me') }}
 						</button>
 					</nuxt-link>
@@ -50,12 +50,15 @@ export default {
 	},
 	head() {
 		return {
-			title: this.$t('nav_links.about_me'),
-			meta: [{ hid: 'description', name: 'description', content: 'My custom description' }]
+			title: this.$t('nav_links.about_me')
+			// meta: [{ hid: 'description', name: 'description', content: 'My custom description' }]
 		};
 	}
 };
 </script>
 
 <style lang="scss" scoped>
+.custom-line-height {
+	line-height: 1.25;
+}
 </style>

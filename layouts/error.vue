@@ -1,22 +1,20 @@
 <template>
-	<div class="container-fluid section-content">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
-				<div class="text-center my-5">
-					<i class="fas fa-exclamation-circle text-danger"></i>
-				</div>
-
+			<div class="col-sm-12 col-md-10 col-lg-6 mx-auto">
 				<div v-if="error.statusCode === 404">
 					<h1 class="text-center text-uppercase">
 						{{ $t('errors.not_found_title') }}
 					</h1>
+
+					<img class="d-block mx-auto my-5" width="250px" src="~@/assets/img/404.svg" alt="Page not found icon, a ghost being abducted." />
 
 					<p class="text-center">
 						{{ $t('errors.not_found_message') }}
 					</p>
 				</div>
 
-				<h1 v-else>{{ $t('errors.error') }}</h1>
+				<h1 v-else class="text-center text-uppercase">{{ $t('errors.error') }}</h1>
 
 				<div class="col-sm-12 col-md-6 col-lg-4 mx-auto">
 					<nuxt-link :to="localePath({ name: 'aboutme' })" class="btn btn-link btn-block text-decoration-none text-center text-uppercase" role="button">
@@ -39,9 +37,3 @@ export default {
 	}
 };
 </script>
-
-<style lang="scss" scoped>
-.fa-exclamation-circle {
-	font-size: 12rem;
-}
-</style>

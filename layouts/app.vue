@@ -21,20 +21,3 @@ export default {
 	}
 };
 </script>
-
-<style lang="scss">
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-// Variables
-@import '../assets/scss/variables';
-
-// Bootstrap
-@import '../assets/scss/vendor/bootstrap/bootstrap';
-
-// Fontawesome
-@import '../assets/scss/vendor/fontawesome/fontawesome';
-
-// Base app styles
-@import '../assets/scss/app/app';
-</style>

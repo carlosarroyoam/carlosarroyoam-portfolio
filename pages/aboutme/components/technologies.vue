@@ -1,14 +1,12 @@
 <template>
 	<div class="technologies-wrapper">
-		<div v-bind:key="area.id" v-for="area in areas" v-bind:id="area.id" class="technologies-card shadow-sm">
-			<span class="icon-wrapper">
-				<i class="technologies-icon fas" v-bind:class="area.icon"></i>
-			</span>
-			<h4 class="d-inline-block technologies-title text-uppercase">
+		<div class="technologies-card shadow-sm" :key="area.title" v-for="area in areas">
+			<span class="icon-wrapper"> <img class="technologies-icon" :src="area.icon" :alt="area.icon_alt" /> </span>
+			<h4 class="d-inline-block text-uppercase">
 				{{ area.title }}
 			</h4>
-			<ul id="technologies.id" class="technologies-list">
-				<li v-bind:key="technology" v-for="technology in area.technologies">
+			<ul class="technologies-list mt-2">
+				<li :key="technology" v-for="technology in area.technologies">
 					{{ technology }}
 				</li>
 			</ul>
@@ -23,21 +21,21 @@ export default {
 		return {
 			areas: [
 				{
-					id: 'tech-card-1',
 					title: 'Back-end',
-					icon: 'fa-server',
+					icon: require('../../../assets/img/icons/server.svg'),
+					icon_alt: 'Backend icon, a server illustration',
 					technologies: ['Java', 'C#', 'PHP', 'Laravel', 'SQL Databases', 'Web Services', 'Web Sockets']
 				},
 				{
-					id: 'tech-card-2',
 					title: 'Front-end',
-					icon: 'fa-desktop',
+					icon: require('../../../assets/img/icons/desktop.svg'),
+					icon_alt: 'Frontend icon, a desktop illustration',
 					technologies: ['HTML5', 'JavaScript', 'CSS', 'Angular', 'Vue.js', 'jQuery', 'Bootstrap']
 				},
 				{
-					id: 'tech-card-3',
 					title: 'Mobile',
-					icon: 'fa-mobile',
+					icon: require('../../../assets/img/icons/mobile.svg'),
+					icon_alt: 'Mobile icon, a mobile device illustration',
 					technologies: ['Android Nativo', 'Flutter', 'SQLite']
 				}
 			]
@@ -52,19 +50,7 @@ export default {
 	grid-gap: 1.5em;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: auto;
-	grid-template-areas: 'tech-card-1 tech-card-2 tech-card-3';
-}
-
-#tech-card-1 {
-	grid-area: tech-card-1;
-}
-
-#tech-card-2 {
-	grid-area: tech-card-2;
-}
-
-#tech-card-3 {
-	grid-area: tech-card-3;
+	grid-template-areas: 'backend frontend mobile';
 }
 
 ////
@@ -85,7 +71,10 @@ export default {
 		padding: 0 5em;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(3, auto);
-		grid-template-areas: 'tech-card-1' 'tech-card-2' 'tech-card-3';
+		grid-template-areas:
+			'backend'
+			'frontend'
+			'mobile';
 	}
 }
 
@@ -97,26 +86,19 @@ export default {
 }
 
 .icon-wrapper {
-	width: 5em;
-	height: 5em;
+	width: 4.5em;
+	height: 4.5em;
 	margin: 0 auto 0.6em auto;
 	background-color: var(--blue);
 	border-radius: 100%;
 	display: flex;
-	align-items: flex-start;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+	align-items: center;
+	justify-content: center;
 }
 
 .technologies-icon {
-	margin: 0 auto;
-	font-size: 3em;
-	color: var(--white);
-	align-self: center;
-	grid-area: icon;
-	display: inline-block;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+	width: 3em;
+	height: 3em;
 }
 
 .technologies-list {
