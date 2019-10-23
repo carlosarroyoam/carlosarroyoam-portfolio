@@ -33,8 +33,7 @@ export default {
 	},
 	head() {
 		return {
-			title: this.$t('nav_links.resume'),
-			meta: [{ hid: 'description', name: 'description', content: 'My custom description' }]
+			title: this.$t('nav_links.resume')
 		};
 	}
 };

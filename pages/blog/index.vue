@@ -21,7 +21,6 @@
 
 <script>
 import ArticlesList from './components/articles_list';
-
 export default {
 	name: 'Blog',
 	layout: 'app',

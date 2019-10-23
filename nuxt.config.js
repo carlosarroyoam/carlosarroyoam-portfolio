@@ -29,7 +29,7 @@ export default {
 			{
 				hid: 'keywords',
 				name: 'keywords',
-				content: 'carlosarroyoam, Carlos Arroyo, Carlos Alberto Arroyo Martínez, Blog Programacion, Desarrollo Web Querétaro, Diseño Web Querétaro, Desarrollo Web Querétaro, Diseño Web Querétaro, Paginas web Querétaro, Ingeniero en Informatica Querétaro'
+				content: 'carlosarroyoam, Carlos Arroyo, Carlos Alberto Arroyo Martínez, Blog Programacion Queretaro, Desarrollo Web Querétaro, Diseño Web Querétaro, Desarrollo Web Querétaro, Paginas web Querétaro, Ingeniero en Informatica Querétaro'
 			}
 		],
 		link: [
@@ -42,8 +42,7 @@ export default {
 		script: [
 			{ src: 'https://code.jquery.com/jquery-3.3.1.min.js', crossorigin: 'anonymous', defer: true },
 			{ src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', crossorigin: 'anonymous', defer: true },
-			{ src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', crossorigin: 'anonymous', defer: true },
-			{ type: 'text/javascript', src: '/js/app.js', defer: true }
+			{ src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', crossorigin: 'anonymous', defer: true }
 		]
 	},
 	router: {
@@ -84,13 +83,11 @@ export default {
 		lazy: true,
 		langDir: 'lang/',
 		strategy: 'prefix',
+		rootRedirect: 'es/aboutme/',
 		detectBrowserLanguage: {
 			useCookie: true,
-			cookieKey: 'i18n_redirected'
-		},
-		parsePages: false,
-		pages: {
-			index: false
+			cookieKey: 'i18n_redirected',
+			fallbackLocale: 'en'
 		}
 	},
 	/*
@@ -105,7 +102,9 @@ export default {
 		/*
 		 ** You can extend webpack config here
 		 */
-		extend(config, ctx) { }
+		extend(config, ctx) { },
+		extractCSS: true,
+
 	},
 	generate: {
 		fallback: '404.html',

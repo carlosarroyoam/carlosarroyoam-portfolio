@@ -5,11 +5,11 @@
 	"author": "carlosarroyoam",
 	"private": true,
 	"scripts": {
-		"dev": "nuxt",
+		"dev": "nuxt --hostname 192.168.25.110 --port 3000",
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
-		"deploy": "nuxt generate && cd dist && git init && git add --all && git commit -m \"Deploy\" && git remote add origin https://github.com/carlosarroyoam/carlosarroyoam.github.io.git && git push origin master --force"
+		"deploy": "nuxt generate && cd dist && git init && git add --all && git commit -m \"Deploy on Github Pages\" && git remote add origin https://github.com/carlosarroyoam/carlosarroyoam.github.io.git && git push origin master --force"
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.3.6",

@@ -18,8 +18,7 @@ export default {
 	},
 	head() {
 		return {
-			title: 'Change project name',
-			meta: [{ hid: 'description', name: 'description', content: 'My custom description' }]
+			title: 'Change project name'
 		};
 	},
 	created() {

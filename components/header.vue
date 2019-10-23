@@ -4,19 +4,19 @@
 			Carlos Alberto Arroyo Martínez
 		</nuxt-link>
 
-		<button class="navbar-toggler" id="navbarToggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-			<svg class="menu-icon d-block" width="27" height="27" viewBox="0 0 24 24">
+		<button class="navbar-toggler" id="navbarToggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<svg class="menu-icon d-block" width="30" height="30" viewBox="0 0 24 24">
 				<path d="M0 0h24v24H0z" fill="none" />
 				<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
 			</svg>
-			<svg class="menu-close-icon d-none" width="27" height="27" viewBox="0 0 24 24">
+			<svg class="menu-close-icon d-none" width="30" height="30" viewBox="0 0 24 24">
 				<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
 				<path d="M0 0h24v24H0z" fill="none" />
 			</svg>
 		</button>
 
 		<div class="collapse navbar-collapse" id="mainNavbar">
-			<ul class="navbar-nav ml-md-auto" id="navbar-nav">
+			<ul class="navbar-nav ml-md-auto">
 				<!-- About me -->
 				<nuxt-link :to="localePath({ name: 'aboutme' })" tag="li" class="nav-item text-uppercase">
 					<a class="nav-link">{{ $t('nav_links.about_me') }}</a>
@@ -48,6 +48,43 @@ export default {
 		setLocale(locale) {
 			this.$i18n.locale = locale;
 		}
+	},
+	mounted() {
+		// When navbar is show event is called
+		$('#mainNavbar').on('show.bs.collapse', function() {
+			$('.menu-icon')
+				.removeClass('d-block')
+				.addClass('d-none');
+
+			$('.menu-close-icon')
+				.removeClass('d-none')
+				.addClass('d-block');
+		});
+
+		// When navbar is hide event is called
+		$('#mainNavbar').on('hide.bs.collapse', function() {
+			$('.menu-icon')
+				.removeClass('d-none')
+				.addClass('d-block');
+
+			$('.menu-close-icon')
+				.removeClass('d-block')
+				.addClass('d-none');
+		});
+
+		// When navbar is shown, attach onClick event to ".section-content, .nav-item"
+		$('#mainNavbar').on('shown.bs.collapse', function() {
+			$('.navbar-brand, .nav-item, .app-content, .footer').bind('click', function() {
+				if ($('#navbarToggler').is(':visible')) {
+					$('#mainNavbar').collapse('hide');
+				}
+			});
+		});
+
+		// When navbar is hidden, remove onClick event to ".section-content, .nav-item"
+		$('#mainNavbar').on('hidden.bs.collapse', function() {
+			$('.navbar-brand, .nav-item, .app-content, .footer').unbind('click');
+		});
 	}
 };
 </script>
@@ -59,17 +96,16 @@ export default {
 }
 
 // Boostrapt classes ovewrited
-.nav-link {
-	font-weight: 500;
-}
-
 .navbar-toggler {
 	border: none;
 	font-size: 1.7em;
 }
-
 .navbar-toggler:focus {
 	outline: 0;
+}
+
+.nav-link {
+	font-weight: 500;
 }
 
 .menu-icon,
