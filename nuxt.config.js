@@ -83,7 +83,7 @@ export default {
 		lazy: true,
 		langDir: 'lang/',
 		strategy: 'prefix',
-		rootRedirect: 'es/aboutme/',
+		rootRedirect: 'es/aboutme',
 		detectBrowserLanguage: {
 			useCookie: true,
 			cookieKey: 'i18n_redirected',

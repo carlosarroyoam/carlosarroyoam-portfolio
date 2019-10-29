@@ -1,7 +1,7 @@
 <template>
 	<div class="jumbotron text-md-center shadow-sm">
 		<div class="row">
-			<div class="col-sm-12 col-md-10 col-lg-8 mt-5 mx-auto">
+			<div class="col-sm-12 col-md-10 col-lg-8 mt-md-5 mx-auto">
 				<h1 class="display-1 mt-5 mb-1 text-white text-uppercase">Carlos Alberto Arroyo Martínez</h1>
 				<h1 class="display-2 text-light text-uppercase">SOFTWARE DEVELOPER</h1>
 
@@ -41,6 +41,7 @@ export default {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	overflow-x: hidden;
 }
 
 ////
@@ -49,7 +50,7 @@ export default {
 //
 @media only screen and (max-width: 768px) {
 	.jumbotron {
-		min-height: 80vh;
+		min-height: 70vh;
 	}
 }
 </style>

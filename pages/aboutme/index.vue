@@ -18,7 +18,7 @@
 				</div>
 			</div>
 
-			<div class="row mt-3 mx-2 mx-md-3 mx-lg-4 mx-xl-5 px-3 py-5 bg-secondary shadow-sm">
+			<div class="row mt-3 mx-1 mx-md-3 mx-lg-4 mx-xl-5 px-3 py-4 py-md-5 bg-secondary shadow-sm">
 				<div class="col-sm-12 col-md-7 col-lg-6 my-auto mx-auto mr-xl-3">
 					<h2 class="m-0 text-center text-uppercase text-white custom-line-height">Trabajemos JUNTOS en <span class="text-primary">proyectos INCREÍBLEs</span></h2>
 				</div>
@@ -58,6 +58,6 @@ export default {
 
 <style lang="scss" scoped>
 .custom-line-height {
-	line-height: 1.25;
+	line-height: 1.3;
 }
 </style>

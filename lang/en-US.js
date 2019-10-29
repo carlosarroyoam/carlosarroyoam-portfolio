@@ -1,5 +1,4 @@
 export default {
-	ass: 'assssss',
 	nav_links: {
 		about_me: 'About Me',
 		portfolio: 'Portfolio',

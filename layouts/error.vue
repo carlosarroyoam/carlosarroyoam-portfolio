@@ -7,7 +7,7 @@
 						{{ $t('errors.not_found_title') }}
 					</h1>
 
-					<img class="d-block mx-auto my-5" width="250px" src="~@/assets/img/404.svg" alt="Page not found icon, a ghost being abducted." />
+					<img class="d-block mx-auto my-5" width="250px" src="~@/assets/img/404.svg" alt="Page not found  image, a ghost being abducted." />
 
 					<p class="text-center">
 						{{ $t('errors.not_found_message') }}
@@ -28,7 +28,6 @@
 
 <script>
 export default {
-	props: ['error'],
 	layout: 'app',
 	head() {
 		return {

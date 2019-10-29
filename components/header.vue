@@ -91,8 +91,7 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-	background-color: #37474f;
-	overflow: hidden;
+	background: #37474f;
 }
 
 // Boostrapt classes ovewrited
