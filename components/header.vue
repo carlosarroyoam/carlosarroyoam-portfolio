@@ -1,6 +1,6 @@
 <template>
-	<nav class="navbar navbar-expand-md navbar-dark container-fluid shadow fixed-top">
-		<nuxt-link :to="localePath({ name: 'aboutme' })" tag="a" class="navbar-brand mb-0 h1">
+	<nav class="navbar navbar-expand-md navbar-dark container-fluid bg-secondary shadow fixed-top">
+		<nuxt-link :to="localePath({ name: 'aboutme' })" tag="a" class="navbar-brand mb-0 h1 close-nav-onclick">
 			Carlos Alberto Arroyo Martínez
 		</nuxt-link>
 
@@ -16,7 +16,7 @@
 		</button>
 
 		<div class="collapse navbar-collapse" id="mainNavbar">
-			<ul class="navbar-nav ml-md-auto">
+			<ul class="navbar-nav ml-md-auto close-nav-onclick">
 				<!-- About me -->
 				<nuxt-link :to="localePath({ name: 'aboutme' })" tag="li" class="nav-item text-uppercase">
 					<a class="nav-link">{{ $t('nav_links.about_me') }}</a>
@@ -74,7 +74,7 @@ export default {
 
 		// When navbar is shown, attach onClick event to ".section-content, .nav-item"
 		$('#mainNavbar').on('shown.bs.collapse', function() {
-			$('.navbar-brand, .nav-item, .app-content, .footer').bind('click', function() {
+			$('.close-nav-onclick').bind('click', function() {
 				if ($('#navbarToggler').is(':visible')) {
 					$('#mainNavbar').collapse('hide');
 				}
@@ -83,24 +83,16 @@ export default {
 
 		// When navbar is hidden, remove onClick event to ".section-content, .nav-item"
 		$('#mainNavbar').on('hidden.bs.collapse', function() {
-			$('.navbar-brand, .nav-item, .app-content, .footer').unbind('click');
+			$('.close-nav-onclick').unbind('click');
 		});
 	}
 };
 </script>
 
 <style lang="scss" scoped>
-.navbar {
-	background: #37474f;
-}
-
-// Boostrapt classes ovewrited
 .navbar-toggler {
 	border: none;
-	font-size: 1.7em;
-}
-.navbar-toggler:focus {
-	outline: 0;
+	font-size: 1.7rem;
 }
 
 .nav-link {
@@ -112,33 +104,9 @@ export default {
 	fill: var(--white);
 }
 
-.nav-item-button {
-	margin: auto 0 auto 0.7em;
-	padding: 0 0.6em;
-	min-height: 1.9em;
-	border-radius: 15px;
-	text-align: center;
-}
-
-.nav-item-button--text {
-	padding-top: 1px;
-	min-width: 100%;
-	vertical-align: middle;
-}
-
-.nav-item-button--icon {
-	margin-left: 0.3em;
-	padding-top: 3px;
-	font-size: 1.6em;
-	vertical-align: middle;
-}
-
-////
-// Device = Most of Smartphones Mobiles (Portrait)
-//
 @media only screen and (max-width: 425px) {
 	.navbar-toggler {
-		font-size: 1.6em;
+		font-size: 1.6rem;
 	}
 }
 </style>

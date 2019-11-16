@@ -1,8 +1,8 @@
 <template>
-	<div class="jumbotron text-md-center shadow-sm">
+	<div class="jumbotron py-5 text-md-center shadow-sm">
 		<div class="row">
-			<div class="col-sm-12 col-md-10 col-lg-8 mt-md-5 mx-auto">
-				<h1 class="display-1 mt-5 mb-1 text-white text-uppercase">Carlos Alberto Arroyo Martínez</h1>
+			<div class="col-sm-12 col-md-10 col-lg-8 mt-3 mt-md-5 mx-auto">
+				<h1 class="display-1 mb-1 text-white text-uppercase">Carlos Alberto Arroyo Martínez</h1>
 				<h1 class="display-2 text-light text-uppercase">SOFTWARE DEVELOPER</h1>
 
 				<p class="text-light text-md-center mt-3">
@@ -13,9 +13,9 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-12 col-md-5 col-lg-4 col-xl-3 text-center mt-5 mx-auto">
+			<div class="col-sm-12 col-md-5 col-lg-4 col-xl-3 text-center mt-5 mb-4 mb-md-5 mx-auto">
 				<nuxt-link :to="localePath({ name: 'portfolio' })" tag="a" class="text-decoration-none">
-					<button type="button" class="btn btn-primary btn-block text-uppercase px-4 shadow-sm">
+					<button type="button" class="btn btn-success btn-block text-uppercase px-4 shadow-sm">
 						{{ $t('nav_links.portfolio') }}
 					</button>
 				</nuxt-link>
@@ -36,21 +36,11 @@ export default {
 <style lang="scss" scoped>
 .jumbotron {
 	margin-top: -2.2em;
-	min-height: calc(100vh - 3em);
-	background-image: url('../../../assets/img/carlosarroyoam_hero_background.svg');
+	// background-image: url('../../../assets/img/carlosarroyoam_hero_background.svg');
+	background-color: var(--primary);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	overflow-x: hidden;
-}
-
-////
-// Device = Smartphones Mobiles (Portrait)
-// Screen = Less than 768px
-//
-@media only screen and (max-width: 768px) {
-	.jumbotron {
-		min-height: 70vh;
-	}
 }
 </style>

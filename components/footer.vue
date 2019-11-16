@@ -1,5 +1,5 @@
 <template>
-	<footer class="footer">
+	<footer class="footer close-nav-onclick">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12 mx-auto">

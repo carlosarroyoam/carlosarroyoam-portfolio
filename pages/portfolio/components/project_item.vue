@@ -34,7 +34,7 @@ export default {
 }
 
 .project:hover {
-	box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.2);
 }
 
 .project .project__image {

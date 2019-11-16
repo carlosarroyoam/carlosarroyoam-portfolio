@@ -1,5 +1,5 @@
 // Body
-$body-bg: #ebebeb;
+$body-bg: #eeeeee;
 
 ////
 // Typography
@@ -20,23 +20,23 @@ $display2-size: $font-size-base * 1.5;
 $lead-font-size: $font-size-base * 1.2;
 
 // Components
-$border-radius: 0;
-$border-radius-lg: 0;
-$border-radius-sm: 0;
+$border-radius: 0.15em;
+$border-radius-lg: 0.15em;
+$border-radius-sm: 0.15em;
 
 // Colors
-$blue: #0091ff;
+$blue: #2185d5;
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66d9b;
-$red: #e3342f;
+$red: #f73859;
 $orange: #f6993f;
 $yellow: #ffed4a;
-$green: #38c172;
+$green: #17b978;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
-$secondary: #434343;
+$secondary: #37474f;
 
 // Shadows
 $box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.4);

@@ -83,6 +83,7 @@ export default {
 	background-color: var(--white);
 	display: block;
 	text-align: center;
+	border-radius: 0.15em;
 }
 
 .icon-wrapper {

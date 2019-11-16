@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Header />
-		<nuxt class="app-content" />
+		<nuxt class="close-nav-onclick" />
 		<Footer />
 	</div>
 </template>

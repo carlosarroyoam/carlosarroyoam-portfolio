@@ -29,6 +29,7 @@
 <script>
 export default {
 	layout: 'app',
+	props: ['error'],
 	head() {
 		return {
 			title: this.$t('errors.error')
