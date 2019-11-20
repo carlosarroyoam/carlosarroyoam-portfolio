@@ -7,8 +7,8 @@
 
 				<p class="text-light text-md-center mt-3">
 					Hola, soy un Ingeniero en Informática egresado del
-					<a class="text-success text-decoration-none" href="http://www.itsur.edu.mx" target="__blank">ITSUR</a>. Apasionado por el desarrollo de aplicaciones web y móviles, la tecnología y los videojuegos. Cuento con conocimientos en diversas
-					tecnologías web y móviles, bases de datos relacionales y alguno que otro Framework web. Tengo 24 años y actualmente radico en la cuidad de Apaseo el Alto, Guanajuato.
+					<a class="text-success text-decoration-none" href="http://www.itsur.edu.mx" target="__blank">ITSUR</a>. Apasionado por el desarrollo de aplicaciones web y móviles, la tecnología y los videojuegos. Cuento con sólidos conocimientos en
+					diversas tecnologías web y móviles, bases de datos relacionales y alguno que otro framework web MVC. Tengo 24 años y actualmente radico en la ciudad de Apaseo el Alto, Guanajuato.
 				</p>
 			</div>
 		</div>

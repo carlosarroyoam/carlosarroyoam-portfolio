@@ -4,13 +4,13 @@
 			<div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
 				<h1 class="text-md-center text-uppercase">Conecta conmigo</h1>
 				<p class="text-md-center">
-					Si tienes alguna pregunta, una oportunidad de trabajo o simplemente deseas saludarme, no dudes en ponerte en contacto conmigo. A continuación están mi curriculum vitae, mis páginas sociales y mi correo electrónico:
+					Si tienes alguna pregunta, una oportunidad de trabajo o simplemente deseas saludarme, no dudes en ponerte en contacto conmigo. A continuación están mi correo electrónico, curriculum vitae y mis páginas sociales.
 				</p>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-sm-12 col-md-5 col-lg-4 col-xl-3 mt-3 mx-auto text-center">
+			<div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 mt-2 mx-auto text-center">
 				<a class="text-decoration-none" href="mailto:carlosarroyoam@gmail.com">
 					<button type="button" class="btn btn-primary btn-block px-4">
 						<span class="d-flex align-items-center justify-content-center">
@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-sm-12 col-md-5 col-lg-4 mt-5 mx-auto social-links-container">
+			<div class="col-sm-12 col-md-6 col-lg-5 col-xl-4 mt-5 mx-auto social-links-container">
 				<nuxt-link tag="a" :to="localePath({ name: 'contactme-resume' })" class="social-button-container text-decoration-none">
 					<div class="social-button">
 						<svg class="social-icon ml-2" viewBox="0 0 512 512">
@@ -117,6 +117,7 @@ export default {
 //
 @media (max-width: 1280px) {
 	.social-links-container {
+		padding: 0 3em;
 		grid-gap: 1.5em;
 	}
 }
