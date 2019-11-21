@@ -1,12 +1,12 @@
 <template>
 	<div class="technologies-wrapper">
-		<div class="technologies-card shadow-sm" :key="area.title" v-for="area in areas">
-			<span class="icon-wrapper"> <img class="technologies-icon" :src="area.icon" :alt="area.icon_alt" /> </span>
+		<div class="technologies-card shadow-sm" :key="technical_skills.title" v-for="development_area in technical_skills">
+			<span class="icon-wrapper"> <img class="technologies-icon" v-bind:src="'../../../img/icons/' + development_area.icon" v-bind:alt="development_area.icon_alt" /> </span>
 			<h4 class="d-inline-block text-uppercase">
-				{{ area.title }}
+				{{ development_area.title }}
 			</h4>
 			<ul class="technologies-list mt-2">
-				<li :key="technology" v-for="technology in area.technologies">
+				<li :key="technology" v-for="technology in development_area.technologies">
 					{{ technology }}
 				</li>
 			</ul>
@@ -15,30 +15,13 @@
 </template>
 
 <script>
+import jsonFile from '../../../data/aboutme/technical_skills.json';
+
 export default {
 	name: 'Technologies',
 	data() {
 		return {
-			areas: [
-				{
-					title: 'Back-end',
-					icon: require('../../../assets/img/icons/server.svg'),
-					icon_alt: 'Backend icon, a server illustration',
-					technologies: ['Java', 'C#', 'PHP', 'Laravel', 'SQL Databases', 'Web Services', 'Web Sockets']
-				},
-				{
-					title: 'Front-end',
-					icon: require('../../../assets/img/icons/desktop.svg'),
-					icon_alt: 'Frontend icon, a desktop illustration',
-					technologies: ['HTML5', 'JavaScript', 'CSS', 'Angular', 'Vue.js', 'jQuery', 'Bootstrap']
-				},
-				{
-					title: 'Mobile',
-					icon: require('../../../assets/img/icons/mobile.svg'),
-					icon_alt: 'Mobile icon, a mobile device illustration',
-					technologies: ['Android Nativo', 'Flutter', 'SQLite']
-				}
-			]
+			technical_skills: jsonFile.technical_skills
 		};
 	}
 };
@@ -53,19 +36,12 @@ export default {
 	grid-template-areas: 'backend frontend mobile';
 }
 
-////
-// Device = Laptops, Desktops
-// Screen = B/w 1025px to 1280px
-//
 @media (max-width: 1280px) {
 	.technologies-wrapper {
 		grid-gap: 1em;
 	}
 }
 
-////
-// Device = Most of the Smartphones Mobiles (Portrait)
-//
 @media only screen and (max-width: 768px) {
 	.technologies-wrapper {
 		padding: 0 5em;
