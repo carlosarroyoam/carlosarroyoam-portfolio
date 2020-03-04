@@ -13,14 +13,17 @@
 			</div>
 
 			<div class="row">
-				<div class="col-sm-12 col-md-10 col-lg-8 col-xl-7 my-5 mx-auto">
+				<div class="col-sm-12 col-md-10 col-lg-7 my-5 mx-auto">
 					<Technologies />
 				</div>
 			</div>
 
-			<div class="row mt-3 mx-1 mx-md-3 mx-lg-4 mx-xl-5 px-3 py-4 py-md-5 bg-secondary rounded shadow-sm">
+			<div class="row mt-3 mx-1 mx-md-3 mx-lg-5 mx-xl-5 px-2 py-4 bg-secondary rounded shadow-sm">
 				<div class="col-sm-12 col-md-7 col-lg-6 my-auto mx-auto mr-xl-3">
-					<h2 class="m-0 text-center text-uppercase text-white custom-line-height">Trabajemos juntos en <span class="text-primary">proyectos increíbles</span></h2>
+					<h3 class="m-0 text-center text-uppercase text-white custom-line-height">
+						Trabajemos juntos en
+						<span class="text-primary">proyectos increíbles</span>
+					</h3>
 				</div>
 				<div class="col-sm-12 col-md-5 col-lg-4 my-auto mx-auto">
 					<nuxt-link :to="localePath({ name: 'contactme' })" tag="a" class="text-decoration-none">
