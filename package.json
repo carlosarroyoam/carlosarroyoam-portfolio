@@ -7,11 +7,9 @@
 	"scripts": {
 		"dev": "nuxt --hostname 0.0.0.0 --port 3000",
 		"build": "nuxt build",
-		"build:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
-		"generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
-		"deploy:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate && push-dir --dir=dist --branch=gh-pages --cleanup"
+		"deploy:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate && push-dir --dir=dist --remote=gh-pages --branch=master --cleanup"
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.9.7",
