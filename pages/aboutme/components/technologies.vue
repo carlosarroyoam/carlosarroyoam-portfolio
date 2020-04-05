@@ -1,7 +1,7 @@
 <template>
 	<div class="technologies-wrapper">
 		<div class="technologies-card shadow-sm" :key="technical_skills.title" v-for="development_area in technical_skills">
-			<span class="icon-wrapper">
+			<span class="technologies-card-header">
 				<img class="technologies-icon" v-bind:src="'../../../img/icons/' + development_area.icon" v-bind:alt="development_area.icon_alt" />
 				<h4 class="d-inline-block text-uppercase">
 					{{ development_area.title }}
@@ -63,19 +63,20 @@ export default {
 	border-radius: 0.15em;
 }
 
-.icon-wrapper {
+.technologies-card-header {
 	width: 100%;
-	height: 5rem;
+	height: 5.5rem;
 	padding: 1rem 1.5rem;
 	background-color: var(--blue);
+	border-radius: 0.15em 0.15em 0 0;
 	display: flex;
 	align-items: flex-start;
 	color: #fff;
 }
 
 .technologies-icon {
-	width: 3em;
-	height: 3em;
+	width: 3.5rem;
+	height: 3.5rem;
 	margin-right: 1.5rem;
 }
 

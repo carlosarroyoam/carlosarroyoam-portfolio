@@ -1,13 +1,13 @@
 <template>
 	<div>
-		<Header />
-		<nuxt class="close-nav-onclick" />
+		<Navbar />
+		<nuxt />
 		<Footer />
 	</div>
 </template>
 
 <script>
-import Header from '../components/header';
+import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 export default {
@@ -16,7 +16,7 @@ export default {
 		return this.$nuxtI18nSeo();
 	},
 	components: {
-		Header,
+		Navbar,
 		Footer
 	}
 };

@@ -1,5 +1,6 @@
 <template>
-	<nav class="navbar navbar-expand-md navbar-dark container-fluid bg-secondary shadow fixed-top">
+	<div>
+		<nav class="navbar navbar-expand-md navbar-dark container-fluid bg-secondary shadow fixed-top zindex-fixed">
 		<nuxt-link :to="localePath({ name: 'aboutme' })" tag="a" class="navbar-brand mb-0 h1 close-nav-onclick">
 			Carlos Alberto Arroyo Martínez
 		</nuxt-link>
@@ -39,11 +40,14 @@
         <a class="dropdown-item" href="locale" v-on:click.prevent="setLocale('es')">ES</a>-->
 		</div>
 	</nav>
+
+	<div class="fixed-top w-100 h-100 zindex-dropdown d-none navbar-overlay close-nav-onclick"></div>
+	</div>
 </template>
 
 <script>
 export default {
-	name: 'Header',
+	name: 'Navbar',
 	methods: {
 		setLocale(locale) {
 			this.$i18n.locale = locale;
@@ -79,11 +83,19 @@ export default {
 					$('#mainNavbar').collapse('hide');
 				}
 			});
+
+			$('.navbar-overlay')
+				.removeClass('d-none')
+				.addClass('d-block');
 		});
 
 		// When navbar is hidden, remove onClick event to ".section-content, .nav-item"
 		$('#mainNavbar').on('hidden.bs.collapse', function() {
 			$('.close-nav-onclick').unbind('click');
+
+			$('.navbar-overlay')
+				.removeClass('d-block')
+				.addClass('d-none');
 		});
 	}
 };
@@ -102,6 +114,10 @@ export default {
 .menu-icon,
 .menu-close-icon {
 	fill: var(--white);
+}
+
+.navbar-overlay {
+	z-index: 1000;
 }
 
 @media only screen and (max-width: 425px) {
