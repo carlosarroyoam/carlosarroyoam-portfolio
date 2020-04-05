@@ -1,5 +1,13 @@
+// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+	router: {
+		base: '/'
+	}
+} : {}
+
 export default {
 	mode: 'universal',
+	routerBase,
 	/*
 	 ** Headers of the page
 	 */
@@ -15,7 +23,7 @@ export default {
 			},
 			{
 				name: 'theme-color',
-				content: '#37474f'
+				content: '#384247'
 			},
 			{
 				name: 'X-UA-Compatible',
@@ -47,6 +55,7 @@ export default {
 	},
 	router: {
 		linkActiveClass: 'active',
+		base: '/carlosarroyoam'
 	},
 	/*
 	 ** Customize the progress-bar color

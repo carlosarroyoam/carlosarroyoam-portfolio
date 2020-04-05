@@ -9,7 +9,7 @@
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
-		"deploy": "nuxt generate && cd dist && git init && git add --all && git commit -m \"Deploy on Github Pages\" && git remote add origin https://github.com/carlosarroyoam/carlosarroyoam.github.io.git && git push origin master --force"
+		"deploy:gh-pages": "nuxt generate && push-dir --dir=dist --branch=gh-pages --cleanup"
 	},
 	"dependencies": {
 		"@nuxtjs/axios": "^5.9.7",
