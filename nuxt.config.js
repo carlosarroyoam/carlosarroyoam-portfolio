@@ -1,13 +1,7 @@
-// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-	router: {
-		base: '/'
-	}
-} : {}
+import webpack from 'webpack';
 
 export default {
 	mode: 'universal',
-	routerBase,
 	/*
 	 ** Headers of the page
 	 */
@@ -47,15 +41,10 @@ export default {
 				href: '/favicon.ico'
 			}
 		],
-		script: [
-			{ src: 'https://code.jquery.com/jquery-3.3.1.min.js', crossorigin: 'anonymous', defer: true },
-			{ src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', crossorigin: 'anonymous', defer: true },
-			{ src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', crossorigin: 'anonymous', defer: true }
-		]
+		script: []
 	},
 	router: {
 		linkActiveClass: 'active',
-		base: '/carlosarroyoam'
 	},
 	/*
 	 ** Customize the progress-bar color
@@ -72,7 +61,14 @@ export default {
 	/*
 	 ** Plugins to load before mounting the App
 	 */
-	plugins: [],
+	plugins: [
+		{
+			src: '~/plugins/bootstrap', mode: 'client'
+		},
+		{
+			src: '~/plugins/navbar-close', mode: 'client'
+		}
+	],
 	/*
 	 ** Nuxt.js dev-modules
 	 */
@@ -108,10 +104,29 @@ export default {
 	 ** Build configuration
 	 */
 	build: {
+		plugins: [
+			new webpack.ProvidePlugin({
+				// global modules
+				'$': 'jquery',
+				jQuery: 'jquery',
+				'window.jQuery': 'jquery',
+				Popper: ['popper.js', 'default']
+			})
+		],
+		vendor: [
+			'jquery',
+			'bootstrap'
+		],
 		/*
 		 ** You can extend webpack config here
 		 */
 		extend(config, ctx) { },
+		extend(config, { isClient }) {
+			// Extend only webpack config for client-bundle
+			if (isClient) {
+				config.devtool = 'source-map'
+			}
+		},
 		extractCSS: true,
 
 	},
