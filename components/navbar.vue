@@ -52,31 +52,6 @@ export default {
 		setLocale(locale) {
 			this.$i18n.locale = locale;
 		}
-	},
-	mounted() {
-		// When navbar is show event is called
-		$('#mainNavbar').on('show.bs.collapse', function() {
-			$('.menu-icon, .menu-close-icon, .navbar-overlay').toggleClass('d-block d-none');
-		});
-
-		// When navbar is hide event is called
-		$('#mainNavbar').on('hide.bs.collapse', function() {
-			$('.menu-icon, .menu-close-icon, .navbar-overlay').toggleClass('d-block d-none');
-		});
-
-		// When navbar is shown, attach onClick event to ".close-nav-onclick"
-		$('#mainNavbar').on('shown.bs.collapse', function() {
-			$('.close-nav-onclick').bind('click', function() {
-				if ($('#navbarToggler').is(':visible')) {
-					$('#mainNavbar').collapse('hide');
-				}
-			});
-		});
-
-		// When navbar is hidden, remove onClick event to ".section-content, .nav-item"
-		$('#mainNavbar').on('hidden.bs.collapse', function() {
-			$('.close-nav-onclick').unbind('click');
-		});
 	}
 };
 </script>
