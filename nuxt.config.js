@@ -79,8 +79,7 @@ export default {
 	modules: [
 		// Doc: https://axios.nuxtjs.org/usage
 		'@nuxtjs/axios',
-		'nuxt-i18n',
-		'nuxt-purgecss'
+		'nuxt-i18n'
 	],
 	i18n: {
 		locales: [{ code: 'es', iso: 'es-ES', file: 'es-MX.js' }, { code: 'en', iso: 'en-US', file: 'en-US.js' }],
