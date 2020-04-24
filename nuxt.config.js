@@ -104,7 +104,7 @@ export default {
 	},
 	purgeCSS: {
 		paths: [
-			path.join(__dirname, 'node_modules/bootstrap/js/src/collapse.js'),
+			'node_modules/bootstrap/js/src/collapse.js',
 		],
 		whitelist: ['active'],
 	},
