@@ -17,6 +17,7 @@
 		"jquery": "^3.4.1",
 		"nuxt": "^2.12.2",
 		"nuxt-i18n": "^6.8.1",
+		"nuxt-purgecss": "^0.2.1",
 		"popper.js": "^1.16.1"
 	},
 	"devDependencies": {
