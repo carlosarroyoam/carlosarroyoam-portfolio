@@ -43,16 +43,6 @@ html {
 }
 
 ////
-// Device = Big resolution desktops
-// Screen = 1920px to higher resolution desktops
-//
-@media only screen and (min-width: 1920px) {
-  html {
-    font-size: 20px;
-  }
-}
-
-////
 // Device = Small Screen Smartphones Mobiles (Portrait)
 // Screen = Less than 320px
 //
