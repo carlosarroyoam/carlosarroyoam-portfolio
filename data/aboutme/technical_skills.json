@@ -6,7 +6,6 @@
 			"icon_alt": "Backend icon, a server illustration.",
 			"technologies": [
 				"Java",
-				"C#",
 				"PHP",
 				"Laravel",
 				"SQL Databases",
@@ -22,7 +21,6 @@
 				"HTML5",
 				"JavaScript",
 				"CSS",
-				"Angular",
 				"Vue.js",
 				"jQuery",
 				"Bootstrap"
