@@ -20,13 +20,13 @@
 </template>
 
 <script>
-import ArticlesList from './components/articles_list';
+import ArticlesList from '../../components/blog/ArticlesList';
 
 export default {
 	name: 'Blog',
 	layout: 'app',
 	components: {
-		ArticlesList
+		ArticlesList,
 	},
 	data() {
 		return {};
@@ -34,9 +34,9 @@ export default {
 	head() {
 		return {
 			title: this.$t('nav_links.blog'),
-			meta: [{ hid: 'description', name: 'description', content: 'My custom description' }]
+			meta: [{ hid: 'description', name: 'description', content: 'My custom description' }],
 		};
-	}
+	},
 };
 </script>
 

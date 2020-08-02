@@ -38,24 +38,24 @@
 </template>
 
 <script>
-import Hero from './components/hero';
-import Technologies from './components/technologies';
+import Hero from '../../components/aboutme/TheHero';
+import Technologies from '../../components/aboutme/TheTechnologiesResume';
 
 export default {
 	name: 'AboutMe',
 	layout: 'app',
 	components: {
 		Hero,
-		Technologies
+		Technologies,
 	},
 	data() {
 		return {};
 	},
 	head() {
 		return {
-			title: this.$t('nav_links.about_me')
+			title: this.$t('nav_links.about_me'),
 		};
-	}
+	},
 };
 </script>
 

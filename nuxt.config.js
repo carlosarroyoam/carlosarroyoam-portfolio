@@ -123,7 +123,6 @@ export default {
 			})
 		],
 		vendor: [
-			'jquery',
 			'bootstrap'
 		],
 		/*

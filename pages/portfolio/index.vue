@@ -10,45 +10,29 @@
 					Pronto estará lista :) Si quieres ver algo de mi trabajo puedes ir a mi perfil en
 					<a class="text-center font-weight-bold text-decoration-none" target="_blank" href="https://github.com/carlosarroyoam/">GitHub</a>
 					ahí encontraras mucho código.
-					<!-- Estos son algunos de los proyectos en los que eh trabajado, Si
-					quieres ver más de mi trabajo puedes ir a mi perfil en
-					<a
-						class="text-center font-weight-bold text-decoration-none"
-						target="_blank"
-						href="https://github.com/carlosarroyoam/"
-					>GitHub</a>
-					ahí encontraras mucho código. -->
 				</p>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-sm-12 col-xl-10 mt-3 mx-auto">
-				<div class="projects">
-					<!-- <ProjectItem /> -->
-				</div>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import ProjectItem from './components/project_item';
+import ProjectItem from '../../components/portfolio/ProjectItem';
 
 export default {
 	name: 'Portfolio',
 	layout: 'app',
 	components: {
-		ProjectItem
+		ProjectItem,
 	},
 	data() {
 		return {};
 	},
 	head() {
 		return {
-			title: this.$t('nav_links.portfolio')
+			title: this.$t('nav_links.portfolio'),
 		};
-	}
+	},
 };
 </script>
 

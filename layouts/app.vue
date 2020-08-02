@@ -1,14 +1,14 @@
 <template>
 	<div>
-		<Navbar />
+		<TheNavbar />
 		<nuxt />
-		<Footer />
+		<TheFooter />
 	</div>
 </template>
 
 <script>
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import TheNavbar from '../components/TheNavbar';
+import TheFooter from '../components/TheFooter';
 
 export default {
 	name: 'App',
@@ -16,8 +16,8 @@ export default {
 		return this.$nuxtI18nSeo();
 	},
 	components: {
-		Navbar,
-		Footer
-	}
+		TheNavbar,
+		TheFooter,
+	},
 };
 </script>
