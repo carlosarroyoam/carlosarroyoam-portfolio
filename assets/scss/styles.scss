@@ -9,9 +9,18 @@
 @import 'base/typography';
 
 // Layout
+@import 'layout/navbar';
+@import 'layout/footer';
 
 // Components
+@import 'components/aboutme/hero';
+@import 'components/aboutme/technologies-resume';
+@import 'components/projects/projects-item';
+@import 'components/contactme/social-container';
 
 // Pages
 
 // Themes
+
+// Shame
+@import 'abstracts/shame';

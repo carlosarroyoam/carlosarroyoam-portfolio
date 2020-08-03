@@ -32,14 +32,3 @@ export default {
 	},
 };
 </script>
-
-<style lang="scss" scoped>
-.jumbotron {
-	margin-top: -2.2em;
-	background: #e3e3e3;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	overflow-x: hidden;
-}
-</style>

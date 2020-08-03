@@ -55,29 +55,3 @@ export default {
 	},
 };
 </script>
-
-<style lang="scss" scoped>
-.navbar-toggler {
-	border: none;
-	font-size: 1.7rem;
-}
-
-.nav-link {
-	font-weight: 500;
-}
-
-.menu-icon,
-.menu-close-icon {
-	fill: var(--white);
-}
-
-.navbar-overlay {
-	z-index: 1000;
-}
-
-@media only screen and (max-width: 425px) {
-	.navbar-toggler {
-		font-size: 1.6rem;
-	}
-}
-</style>

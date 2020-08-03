@@ -1,0 +1,51 @@
+.social-links-container {
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	transition-duration: 500ms;
+	transition-property: opacity;
+}
+
+.social-button {
+	background-color: var(--blue);
+	width: 4.2rem;
+	height: 4.2rem;
+	margin: 5px auto;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.social-icon {
+	fill: #fff;
+	width: 2.5em;
+	height: 2.5em;
+}
+
+.social-button-container:hover {
+	opacity: 0.9;
+}
+
+////
+// Device = Laptops, Desktops
+// Screen = max-width 1280px
+//
+@media (max-width: 1280px) {
+	.social-links-container {
+		padding: 0 3rem;
+		grid-gap: 1.5rem;
+	}
+}
+
+////
+// Device = Most of the Smartphones Mobiles (Portrait)
+// Screen = max-width 768px
+//
+@media only screen and (max-width: 768px) {
+	.social-links-container {
+		padding: 0;
+	}
+}

@@ -33,11 +33,8 @@ export default {
 	},
 	head() {
 		return {
-			title: this.$t('nav_links.resume')
+			title: this.$t('nav_links.resume'),
 		};
-	}
+	},
 };
 </script>
-
-<style lang="scss" scoped>
-</style>
