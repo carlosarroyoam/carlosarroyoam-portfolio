@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<Hero />
+	<main>
+		<TheHero />
 
 		<div class="container-fluid">
 			<div class="row">
@@ -14,7 +14,7 @@
 
 			<div class="row">
 				<div class="col-sm-12 col-md-10 col-lg-7 my-5 mx-auto">
-					<Technologies />
+					<TheTechnologiesResume />
 				</div>
 			</div>
 
@@ -34,22 +34,19 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</main>
 </template>
 
 <script>
-import Hero from '../../components/aboutme/TheHero';
-import Technologies from '../../components/aboutme/TheTechnologiesResume';
+import TheHero from '~/components/aboutme/TheHero';
+import TheTechnologiesResume from '~/components/aboutme/TheTechnologiesResume';
 
 export default {
 	name: 'AboutMe',
 	layout: 'app',
 	components: {
-		Hero,
-		Technologies,
-	},
-	data() {
-		return {};
+		TheHero,
+		TheTechnologiesResume,
 	},
 	head() {
 		return {

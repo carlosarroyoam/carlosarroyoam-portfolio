@@ -1,5 +1,5 @@
 <template>
-	<div class="container-fluid">
+	<main class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 col-md-10 col-lg-6 mx-auto">
 				<h1 class="text-md-center text-uppercase">
@@ -13,11 +13,11 @@
 				</p>
 			</div>
 		</div>
-	</div>
+	</main>
 </template>
 
 <script>
-import ProjectItem from '../../components/portfolio/ProjectItem';
+import ProjectItem from '~/components/portfolio/ProjectItem';
 
 export default {
 	name: 'Portfolio',

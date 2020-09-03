@@ -1,5 +1,5 @@
 <template>
-	<div class="container-fluid">
+	<main class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
 				<h1 class="text-left text-uppercase d-inline">Curriculum</h1>
@@ -18,10 +18,10 @@
 			</div>
 
 			<div class="col-sm-12 col-md-10 col-lg-8 mt-3 mx-auto">
-				<img class="img-fluid" src="~@/assets/img/cv-webversion-es.jpg" alt="Resume" />
+				<img class="img-fluid" src="~/assets/img/cv-webversion-es.jpg" alt="Resume" />
 			</div>
 		</div>
-	</div>
+	</main>
 </template>
 
 <script>

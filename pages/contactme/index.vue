@@ -1,5 +1,5 @@
 <template>
-	<div class="container-fluid">
+	<main class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
 				<h1 class="text-md-center text-uppercase">Conecta conmigo</h1>
@@ -26,18 +26,18 @@
 			</div>
 		</div>
 
-		<SocialContainer />
-	</div>
+		<TheSocialContainer />
+	</main>
 </template>
 
 <script>
-import SocialContainer from '../../components/contactme/SocialContainer';
+import TheSocialContainer from '~/components/contactme/TheSocialContainer';
 
 export default {
 	name: 'ContactMe',
 	layout: 'app',
 	components: {
-		SocialContainer,
+		TheSocialContainer,
 	},
 	head() {
 		return {

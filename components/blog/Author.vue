@@ -1,11 +1,11 @@
 <template>
-	<div>
+	<section>
 		<img :src="author.image" />
 		<div>
 			<p>{{ author.name }}</p>
 			<p>{{ author.bio }}</p>
 		</div>
-	</div>
+	</section>
 </template>
 
 <script>

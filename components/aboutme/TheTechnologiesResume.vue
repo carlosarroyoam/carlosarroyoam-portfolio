@@ -2,7 +2,7 @@
 	<div class="technologies-wrapper">
 		<div class="technologies-card shadow-sm" :key="technical_skills.title" v-for="development_area in technical_skills">
 			<span class="technologies-card-header">
-				<img class="technologies-icon" v-bind:src="'../../../img/icons/' + development_area.icon" v-bind:alt="development_area.icon_alt" />
+				<img class="technologies-icon" v-bind:src="require('~/assets/img/icons/' + development_area.icon)" v-bind:alt="development_area.icon_alt" />
 				<h4 class="d-inline-block text-uppercase">
 					{{ development_area.title }}
 				</h4>
@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import technichalSkillsJson from '../../data/technical_skills.json';
+import technichalSkillsJson from '~/data/technical_skills.json';
 
 export default {
-	name: 'Technologies',
+	name: 'TheTechnologiesResume',
 	data() {
 		return {
 			technical_skills: technichalSkillsJson.technical_skills,

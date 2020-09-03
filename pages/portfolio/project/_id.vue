@@ -1,12 +1,12 @@
 <template>
-	<div class="container-fluid">
+	<main class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
 				<h3>Proyecto</h3>
 				{{ id }}
 			</div>
 		</div>
-	</div>
+	</main>
 </template>
 
 <script>
@@ -18,12 +18,12 @@ export default {
 	},
 	head() {
 		return {
-			title: 'Change project name'
+			title: 'Change project name',
 		};
 	},
 	created() {
 		this.id = this.$route.params.id;
-	}
+	},
 };
 </script>
 

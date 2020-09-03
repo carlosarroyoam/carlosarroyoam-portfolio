@@ -39,6 +39,6 @@
 
 <script>
 export default {
-	name: 'SocialContainer',
+	name: 'TheSocialContainer',
 };
 </script>

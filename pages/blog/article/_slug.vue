@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Author from '../../../components/blog/Author';
+import Author from '~/components/blog/Author';
 
 export default {
 	name: 'Article',
@@ -38,7 +38,10 @@ export default {
 	},
 	async asyncData({ $content, params }) {
 		const article = await $content('articles', params.slug).fetch();
-		return { article };
+
+		return {
+			article,
+		};
 	},
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<nav class="navbar navbar-expand-md navbar-dark container-fluid bg-secondary shadow fixed-top zindex-fixed">
+		<header class="navbar navbar-expand-md navbar-dark container-fluid bg-secondary shadow fixed-top zindex-fixed">
 			<nuxt-link :to="localePath({ name: 'aboutme' })" tag="a" class="navbar-brand mb-0 h1 close-nav-onclick">
 				Carlos Alberto Arroyo Martínez
 			</nuxt-link>
@@ -16,7 +16,7 @@
 				</svg>
 			</button>
 
-			<div class="collapse navbar-collapse" id="mainNavbar">
+			<nav class="collapse navbar-collapse" id="mainNavbar">
 				<ul class="navbar-nav ml-md-auto close-nav-onclick">
 					<!-- About me -->
 					<nuxt-link :to="localePath({ name: 'aboutme' })" tag="li" class="nav-item text-uppercase">
@@ -35,11 +35,8 @@
 						<a class="nav-link">{{ $t('nav_links.blog') }}</a>
 					</nuxt-link>
 				</ul>
-
-				<!-- <a class="dropdown-item" href="locale" v-on:click.prevent="setLocale('en')">EN</a>
-        <a class="dropdown-item" href="locale" v-on:click.prevent="setLocale('es')">ES</a>-->
-			</div>
-		</nav>
+			</nav>
+		</header>
 
 		<div class="fixed-top w-100 h-100 navbar-overlay close-nav-onclick d-none"></div>
 	</div>

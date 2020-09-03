@@ -15,10 +15,5 @@
 <script>
 export default {
 	name: 'ProjectItem',
-	data() {
-		return {
-			msg: '',
-		};
-	},
 };
 </script>
