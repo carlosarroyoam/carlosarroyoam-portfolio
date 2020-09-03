@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<header class="navbar navbar-expand-md navbar-dark container-fluid bg-secondary shadow fixed-top zindex-fixed">
-			<nuxt-link :to="localePath({ name: 'aboutme' })" tag="a" class="navbar-brand mb-0 h1 close-nav-onclick">
+			<nuxt-link :to="localePath({ name: 'aboutme' })" tag="a" class="navbar-brand h1 mb-0 close-nav-onclick">
 				Carlos Alberto Arroyo Martínez
 			</nuxt-link>
 

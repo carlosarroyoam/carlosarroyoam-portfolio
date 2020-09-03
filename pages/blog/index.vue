@@ -11,29 +11,23 @@
 			</div>
 		</div>
 
-		<div class="row pt-3">
+		<!-- <div class="row pt-3">
 			<div class="col-sm-12 col-md-10 mx-auto">
-				<ul>
-					<li v-for="article of articles" :key="article.slug">
-						<NuxtLink :to="localePath({ name: 'blog-article-slug', params: { slug: article.slug } })">
-							<img :src="article.img" />
-							<div>
-								<h2>{{ article.title }}</h2>
-								<p>by {{ article.author.name }}</p>
-								<p>{{ article.description }}</p>
-							</div>
-						</NuxtLink>
-					</li>
-				</ul>
+				<ArticlesList v-bind:articles="articles" />
 			</div>
-		</div>
+		</div> -->
 	</main>
 </template>
 
 <script>
+import ArticlesList from '~/components/blog/ArticlesList';
+
 export default {
 	name: 'Blog',
 	layout: 'app',
+	components: {
+		ArticlesList,
+	},
 	head() {
 		return {
 			title: this.$t('nav_links.blog'),

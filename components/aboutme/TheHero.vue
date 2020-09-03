@@ -1,9 +1,9 @@
 <template>
-	<div class="jumbotron px-3 py-5 text-md-center shadow-sm">
+	<section class="jumbotron px-3 py-5 text-md-center shadow-sm">
 		<div class="row">
 			<div class="col-sm-12 col-md-10 col-lg-8 mt-3 mt-md-5 mx-auto">
 				<h1 class="display-1 mb-1 text-uppercase">Carlos Alberto Arroyo Martínez</h1>
-				<h1 class="display-2 text-uppercase">SOFTWARE DEVELOPER</h1>
+				<h2 class="display-2 text-uppercase">SOFTWARE DEVELOPER</h2>
 
 				<p class="text-md-center mt-3">
 					Hola, soy un Ingeniero en Informática egresado del
@@ -21,7 +21,7 @@
 				</nuxt-link>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>
 
 <script>
