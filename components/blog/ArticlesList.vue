@@ -1,9 +1,11 @@
 <template>
-	<ul>
-		<li v-for="article of articles" :key="article.slug">
-			<ArticleCard v-bind:article="article" />
-		</li>
-	</ul>
+	<section>
+		<ul>
+			<li v-for="article of articles" :key="article.slug">
+				<ArticleCard v-bind:article="article" />
+			</li>
+		</ul>
+	</section>
 </template>
 
 

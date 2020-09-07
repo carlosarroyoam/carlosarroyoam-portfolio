@@ -1,12 +1,11 @@
 <template>
-	<main class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
-				<h3>Proyecto</h3>
-				{{ id }}
-			</div>
-		</div>
-	</main>
+	<article>
+		<header>
+			<base-heading class="uppercase lg:text-center">Project title</base-heading>
+		</header>
+
+		{{ id }}
+	</article>
 </template>
 
 <script>

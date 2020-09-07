@@ -1,33 +1,31 @@
 {
-	"name": "carlosarroyoam-portfolio",
-	"version": "1.0.0",
-	"description": "Hola, mi nombre es Carlos, soy un Ingeniero en Informática, egresado del ITSUR. Apasionado por el desarrollo de aplicaciones web y móviles, la tecnología y los videojuegos. Cuento con conocimientos en diversas tecnologías web y móviles, bases de datos relacionales y alguno que otro Framework. Tengo 24 años y actualmente radico en la cuidad de Apaseo el Alto, Guanajuato.",
-	"author": "carlosarroyoam",
-	"private": true,
-	"scripts": {
-		"dev": "nuxt --hostname 0.0.0.0 --port 3000",
-		"build": "nuxt build",
-		"start": "nuxt start",
-		"generate": "nuxt generate",
-		"deploy:gh-pages": "nuxt generate && push-dir --dir=dist --remote=gh-pages --branch=master --cleanup"
-	},
-	"dependencies": {
-		"@nuxt/content": "^1.4.1",
-		"@nuxtjs/axios": "^5.9.7",
-		"bootstrap": "^4.5.0",
-		"jquery": "^3.5.1",
-		"nuxt": "^2.12.2",
-		"nuxt-i18n": "^6.8.1",
-		"nuxt-purgecss": "^0.2.1",
-		"popper.js": "^1.16.1"
-	},
-	"devDependencies": {
-		"eslint": "^6.8.0",
-		"node-sass": "^4.14.1",
-		"push-dir": "^0.4.1",
-		"sass": "^1.26.3",
-		"sass-loader": "^8.0.2",
-		"style-loader": "^1.2.1",
-		"vue-template-compiler": "^2.6.11"
-	}
+  "name": "carlosarroyoam-portfolio",
+  "version": "1.0.0",
+  "description": "Hola, mi nombre es Carlos, soy un Ingeniero en Informática, egresado del ITSUR. Apasionado por el desarrollo de aplicaciones web y móviles, la tecnología y los videojuegos. Cuento con conocimientos en diversas tecnologías web y móviles, bases de datos relacionales y alguno que otro Framework. Tengo 24 años y actualmente radico en la cuidad de Apaseo el Alto, Guanajuato.",
+  "author": "carlosarroyoam",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt --hostname 0.0.0.0 --port 3000",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy:gh-pages": "nuxt generate && push-dir --dir=dist --remote=gh-pages --branch=master --cleanup"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.8.1",
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/tailwindcss": "^3.0.2",
+    "nuxt": "^2.14.4",
+    "nuxt-i18n": "^6.13.12",
+    "nuxt-purgecss": "^0.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "node-sass": "^4.14.1",
+    "push-dir": "^0.4.1",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "vue-template-compiler": "^2.6.12"
+  }
 }

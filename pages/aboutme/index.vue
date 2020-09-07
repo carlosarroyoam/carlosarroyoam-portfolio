@@ -1,25 +1,23 @@
 <template>
-	<main>
-		<article class="container-fluid">
-			<div class="row">
-				<div class="col px-0">
-					<TheHero />
-				</div>
+	<article class="mx-auto lg:w-3/4">
+		<div class="row">
+			<div class="px-0 col">
+				<TheHero />
 			</div>
+		</div>
 
-			<div class="row">
-				<div class="col-sm-12 col-md-10 col-lg-8 mt-5 mx-auto">
-					<TheTechnologiesResume />
-				</div>
+		<div class="row">
+			<div class="mx-auto mt-5 col-sm-12 col-md-10 col-lg-8">
+				<TheTechnologiesResume />
 			</div>
+		</div>
 
-			<div class="row">
-				<div class="col-sm-12 col-md-10 mt-5 mx-auto">
-					<TheWorkTogetherButton />
-				</div>
+		<div class="row">
+			<div class="mx-auto mt-5 col-sm-12 col-md-10">
+				<TheWorkTogetherButton />
 			</div>
-		</article>
-	</main>
+		</div>
+	</article>
 </template>
 
 <script>

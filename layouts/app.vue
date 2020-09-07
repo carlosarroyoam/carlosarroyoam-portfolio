@@ -1,14 +1,17 @@
 <template>
-	<div>
-		<TheNavbar />
-		<nuxt />
+	<div class="flex flex-col min-h-screen pt-20 text-sm antialiased theme-light bg-background text-body">
+		<TheHeader />
+		<TheMain>
+			<nuxt />
+		</TheMain>
 		<TheFooter />
 	</div>
 </template>
 
 <script>
-import TheNavbar from '../components/TheNavbar';
-import TheFooter from '../components/TheFooter';
+import TheHeader from '~/components/layout/TheHeader';
+import TheFooter from '~/components/layout/TheFooter';
+import TheMain from '~/components/layout/TheMain';
 
 export default {
 	name: 'App',
@@ -16,8 +19,9 @@ export default {
 		return this.$nuxtI18nSeo();
 	},
 	components: {
-		TheNavbar,
+		TheHeader,
 		TheFooter,
+		TheMain,
 	},
 };
 </script>

@@ -1,18 +1,17 @@
 <template>
-	<main class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
-				<article>
-					<img :src="article.img" :alt="article.alt" />
-					<p>{{ formatDate(article.updatedAt) }}</p>
+	<article>
+		<header>
+			<base-heading class="uppercase lg:text-center">{{ article.title }}</base-heading>
+			<base-paragraph class="md:text-center">{{ article.description }}</base-paragraph>
+		</header>
 
-					<nuxt-content :document="article" />
+		<img :src="article.img" :alt="article.alt" />
+		<p>{{ formatDate(article.updatedAt) }}</p>
 
-					<author :author="article.author" />
-				</article>
-			</div>
-		</div>
-	</main>
+		<nuxt-content :document="article" />
+
+		<Author :author="article.author" />
+	</article>
 </template>
 
 <script>

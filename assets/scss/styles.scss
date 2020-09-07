@@ -1,26 +1,11 @@
 // Abstracts
 @import 'abstracts/variables';
 
-// Vendors
-@import 'vendors/twitter-bootstrap/bootstrap';
-
 // Base
 @import 'base/base';
 @import 'base/typography';
 
-// Layout
-@import 'layout/navbar';
-@import 'layout/footer';
-
-// Components
-@import 'components/aboutme/hero';
-@import 'components/aboutme/technologies-resume';
-@import 'components/projects/projects-item';
-@import 'components/contactme/social-container';
-
-// Pages
-
-// Themes
-
-// Shame
-@import 'abstracts/shame';
+// Vendors
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

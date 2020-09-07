@@ -1,22 +1,12 @@
 <template>
-	<main class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
-				<h1 class="text-md-center text-uppercase">
-					{{ $t('nav_links.blog') }}
-				</h1>
-				<p class="text-md-center">
-					Encuentra artículos interesantes ¡Cada Semana! ❤️
-				</p>
-			</div>
-		</div>
+	<article>
+		<header>
+			<base-heading class="uppercase lg:text-center">{{ $t('nav_links.blog') }}</base-heading>
+			<base-paragraph class="md:text-center">Encuentra artículos interesantes ¡Cada Semana! ❤️</base-paragraph>
+		</header>
 
-		<!-- <div class="row pt-3">
-			<div class="col-sm-12 col-md-10 mx-auto">
-				<ArticlesList v-bind:articles="articles" />
-			</div>
-		</div> -->
-	</main>
+		<ArticlesList v-bind:articles="articles" />
+	</article>
 </template>
 
 <script>

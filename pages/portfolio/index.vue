@@ -1,29 +1,26 @@
 <template>
-	<main class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12 col-md-10 col-lg-6 mx-auto">
-				<h1 class="text-md-center text-uppercase">
-					{{ $t('nav_links.portfolio') }}
-				</h1>
-				<p class="text-md-center">
-					<strong>Whoops! Todavía me encuentro construyendo esta sección.</strong><br />
-					Pronto estará lista :) Si quieres ver algo de mi trabajo puedes ir a mi perfil en
-					<a class="text-center font-weight-bold text-decoration-none" target="_blank" href="https://github.com/carlosarroyoam/">GitHub</a>
-					ahí encontraras mucho código.
-				</p>
-			</div>
-		</div>
-	</main>
+	<article>
+		<header>
+			<base-heading class="uppercase lg:text-center"> {{ $t('nav_links.portfolio') }} </base-heading>
+			<base-paragraph class="lg:text-center"
+				><strong>Whoops! Todavía me encuentro construyendo esta sección.</strong><br />
+				Pronto estará lista :) Si quieres ver algo de mi trabajo puedes ir a mi perfil en
+				<a class="text-center font-weight-bold text-decoration-none" target="_blank" href="https://github.com/carlosarroyoam/">GitHub</a>
+				ahí encontraras mucho código.</base-paragraph
+			>
+		</header>
+		<ProjectsList v-bind:projects="projects" />
+	</article>
 </template>
 
 <script>
-import ProjectItem from '~/components/portfolio/ProjectItem';
+import ProjectsList from '~/components/portfolio/ProjectsList';
 
 export default {
 	name: 'Portfolio',
 	layout: 'app',
 	components: {
-		ProjectItem,
+		ProjectsList,
 	},
 	data() {
 		return {};
@@ -33,19 +30,12 @@ export default {
 			title: this.$t('nav_links.portfolio'),
 		};
 	},
+	async asyncData({ $content, params }) {
+		const projects = [];
+
+		return {
+			projects,
+		};
+	},
 };
 </script>
-
-<style lang="scss" scoped>
-.projects {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-}
-
-@media only screen and (max-width: 768px) {
-	.projects {
-		flex-direction: column;
-	}
-}
-</style>
