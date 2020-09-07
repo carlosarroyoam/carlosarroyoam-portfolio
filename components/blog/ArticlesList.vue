@@ -1,10 +1,8 @@
 <template>
-	<section>
-		<ul>
-			<li v-for="article of articles" :key="article.slug">
-				<ArticleCard v-bind:article="article" />
-			</li>
-		</ul>
+	<section class="mt-6">
+		<div class="grid gap-4 lg:col-3" v-for="article of articles" :key="article.slug">
+			<ArticleCard v-bind:article="article" />
+		</div>
 	</section>
 </template>
 

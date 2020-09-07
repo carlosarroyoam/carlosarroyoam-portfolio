@@ -1,10 +1,8 @@
 <template>
-	<section>
-		<ul>
-			<li v-for="project of projects" :key="project.slug">
-				<ProjectCard v-bind:project="project" />
-			</li>
-		</ul>
+	<section class="mt-6">
+		<div class="grid gap-4 lg:col-3" v-for="project of projects" :key="project.slug">
+			<ProjectCard v-bind:project="project" />
+		</div>
 	</section>
 </template>
 

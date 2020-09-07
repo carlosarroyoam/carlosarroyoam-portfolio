@@ -1,15 +1,17 @@
 <template>
 	<article>
-		<header>
-			<base-heading class="uppercase lg:text-center"> {{ $t('nav_links.portfolio') }} </base-heading>
-			<base-paragraph class="lg:text-center"
-				><strong>Whoops! Todavía me encuentro construyendo esta sección.</strong><br />
-				Pronto estará lista :) Si quieres ver algo de mi trabajo puedes ir a mi perfil en
-				<a class="text-center font-weight-bold text-decoration-none" target="_blank" href="https://github.com/carlosarroyoam/">GitHub</a>
-				ahí encontraras mucho código.</base-paragraph
-			>
-		</header>
-		<ProjectsList v-bind:projects="projects" />
+		<div class="mx-auto lg:w-9/12">
+			<header>
+				<base-heading class="uppercase lg:text-center"> {{ $t('nav_links.portfolio') }} </base-heading>
+				<base-paragraph class="lg:text-center"
+					><strong>Whoops! Todavía me encuentro construyendo esta sección.</strong><br />
+					Pronto estará lista :) Si quieres ver algo de mi trabajo puedes ir a mi perfil en
+					<a class="text-center font-weight-bold text-decoration-none" target="_blank" href="https://github.com/carlosarroyoam/">GitHub</a>
+					ahí encontraras mucho código.</base-paragraph
+				>
+			</header>
+			<ProjectsList v-bind:projects="projects" />
+		</div>
 	</article>
 </template>
 

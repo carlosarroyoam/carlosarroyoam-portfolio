@@ -3,7 +3,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          'Open Sans',
+          'Lato',
         ],
       },
       colors: {
@@ -25,7 +25,10 @@ module.exports = {
       container: {
         center: true,
         padding: '1rem',
-      }
+      },
+      borderRadius: {
+        default: '0.125rem',
+      },
     },
   },
   variants: {},

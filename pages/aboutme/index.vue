@@ -1,21 +1,11 @@
 <template>
-	<article class="mx-auto lg:w-3/4">
-		<div class="row">
-			<div class="px-0 col">
-				<TheHero />
-			</div>
-		</div>
+	<article>
+		<TheHero />
 
-		<div class="row">
-			<div class="mx-auto mt-5 col-sm-12 col-md-10 col-lg-8">
-				<TheTechnologiesResume />
-			</div>
-		</div>
+		<div class="mx-auto lg:w-9/12">
+			<TheTechnologiesResume class="mt-8" />
 
-		<div class="row">
-			<div class="mx-auto mt-5 col-sm-12 col-md-10">
-				<TheWorkTogetherButton />
-			</div>
+			<TheWorkTogetherButton class="mt-10" />
 		</div>
 	</article>
 </template>
