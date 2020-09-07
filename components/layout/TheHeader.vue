@@ -17,7 +17,7 @@
 					</button>
 				</div>
 
-				<nav class="hidden text-xs font-semibold text-gray-500 uppercase sm:text-sm" id="mainNavbar">
+				<nav class="hidden text-xs font-semibold text-gray-500 uppercase lg:block sm:text-sm" id="mainNavbar">
 					<ul class="flex flex-col py-4 lg:py-0 lg:flex-row">
 						<!-- About me -->
 						<nuxt-link :to="localePath({ name: 'aboutme' })" tag="li" class="lg:ml-6">
