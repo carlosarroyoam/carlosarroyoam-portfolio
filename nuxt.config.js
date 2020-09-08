@@ -56,7 +56,6 @@ export default {
         path: '/',
         component: resolve(__dirname, 'pages/aboutme/index.vue')
       })
-      // torch.white(routes)
     }
   },
 
