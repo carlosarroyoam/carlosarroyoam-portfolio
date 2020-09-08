@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 
 export default {
-  mode: 'universal',
+  // mode: 'universal',
   target: 'static',
 
   /*
