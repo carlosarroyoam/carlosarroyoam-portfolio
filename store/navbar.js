@@ -13,4 +13,3 @@ export const getters = {
     return state.isOpen;
   }
 };
-

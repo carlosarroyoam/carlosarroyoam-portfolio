@@ -52,6 +52,7 @@ export default {
 	methods: {
 		toggleNavbar: function () {
 			this.$store.commit('navbar/toggle');
+			console.log(this.isOpen);
 		},
 		setLocale: function (locale) {
 			this.$i18n.locale = locale;
@@ -63,7 +64,7 @@ export default {
 	},
 	watch: {
 		$route() {
-			this.toggleNavbar();
+			this.$store.commit('navbar/toggle');
 		},
 	},
 };
