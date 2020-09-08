@@ -50,13 +50,6 @@ export default {
 	 */
   router: {
     linkActiveClass: 'text-gray-100',
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: 'index',
-        path: '/',
-        component: resolve(__dirname, 'pages/aboutme/index.vue')
-      })
-    }
   },
 
   /*
