@@ -5,7 +5,7 @@
 				<div class="flex flex-row items-center justify-between">
 					<nuxt-link :to="localePath({ name: 'aboutme' })" tag="a" class="text-sm uppercase sm:text-base lg:text-lg"> Carlos Alberto Arroyo Martínez </nuxt-link>
 
-					<button class="text-gray-100 lg:hidden" type="button" aria-label="Toggle navigation bar" v-on:click="toggleNavbar()">
+					<button class="text-gray-100 lg:hidden" type="button" aria-label="Toggle navigation bar" v-on:click="toggle()">
 						<svg class="block w-8 fill-current md:w-10" v-bind:class="{ hidden: isOpen }" viewBox="0 0 24 24">
 							<path d="M0 0h24v24H0z" fill="none" />
 							<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
@@ -40,7 +40,7 @@
 			</div>
 		</header>
 
-		<div class="fixed inset-0 z-30 w-screen h-screen" v-bind:class="{ hidden: !isOpen }" v-on:click="toggleNavbar()"></div>
+		<div class="fixed inset-0 z-30 w-screen h-screen" v-bind:class="{ hidden: !isOpen }" v-on:click="toggle()"></div>
 	</div>
 </template>
 
@@ -66,7 +66,7 @@ export default {
 	},
 	watch: {
 		$route() {
-			this.$store.commit('navbar/toggle');
+			this.$store.commit('navbar/close');
 		},
 	},
 };
