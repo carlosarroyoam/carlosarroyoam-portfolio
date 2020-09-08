@@ -1,8 +1,8 @@
 <template>
-	<article>
+	<article class="mx-auto lg:w-10/12">
 		<header>
 			<base-heading class="uppercase lg:text-center">{{ $t('nav_links.blog') }}</base-heading>
-			<base-paragraph class="md:text-center">Encuentra artículos interesantes ¡Cada Semana! ❤️</base-paragraph>
+			<base-paragraph class="lg:text-center">Encuentra artículos interesantes ¡Cada Semana! ❤️</base-paragraph>
 		</header>
 
 		<ArticlesList v-bind:articles="articles" />

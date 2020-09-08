@@ -1,6 +1,6 @@
 <template>
 	<NuxtLink :to="localePath({ name: 'blog-article-slug', params: { slug: article.slug } })">
-		<img :src="article.img" />
+		<img class="w-full" :src="require('~/assets/img/projects/' + article.img)" />
 		<div>
 			<h2>{{ article.title }}</h2>
 			<p>by {{ article.author.name }}</p>

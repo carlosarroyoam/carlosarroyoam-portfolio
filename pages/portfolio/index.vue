@@ -33,7 +33,7 @@ export default {
 		};
 	},
 	async asyncData({ $content, params }) {
-		const projects = [];
+		const projects = {};
 
 		return {
 			projects,

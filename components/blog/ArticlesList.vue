@@ -1,6 +1,6 @@
 <template>
-	<section class="mt-6">
-		<div class="grid gap-4 lg:col-3" v-for="article of articles" :key="article.slug">
+	<section class="grid gap-6 mt-6 lg:grid-cols-3">
+		<div v-for="article in articles" :key="article.slug">
 			<ArticleCard v-bind:article="article" />
 		</div>
 	</section>
@@ -17,7 +17,7 @@ export default {
 	},
 	props: {
 		articles: {
-			type: Object,
+			type: Array,
 			required: true,
 		},
 	},

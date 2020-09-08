@@ -3,7 +3,7 @@
 		<div class="mx-auto lg:w-9/12">
 			<header>
 				<base-heading class="uppercase lg:text-center">Conecta conmigo</base-heading>
-				<base-paragraph class="md:text-center"
+				<base-paragraph class="lg:text-center"
 					>Si tienes alguna pregunta, una oportunidad de trabajo o simplemente deseas saludarme, no dudes en ponerte en contacto conmigo. A continuación están mi correo electrónico, curriculum vitae y mis páginas sociales.</base-paragraph
 				>
 			</header>
