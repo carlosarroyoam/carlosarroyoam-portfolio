@@ -45,22 +45,25 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
+
 export default {
 	name: 'TheHeader',
-	data: function () {
-		return { isOpen: false };
-	},
 	methods: {
 		toggleNavbar: function () {
-			this.isOpen = !this.isOpen;
+			this.$store.commit('navbar/toggle');
 		},
 		setLocale: function (locale) {
 			this.$i18n.locale = locale;
 		},
+		...mapMutations({ toggle: 'navbar/toggle' }),
+	},
+	computed: {
+		...mapGetters({ isOpen: 'navbar/getNavbarState' }),
 	},
 	watch: {
 		$route() {
-			this.isOpen = false;
+			this.toggleNavbar();
 		},
 	},
 };
