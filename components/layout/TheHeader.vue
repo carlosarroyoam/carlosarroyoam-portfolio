@@ -50,7 +50,7 @@ import { mapGetters, mapMutations } from 'vuex';
 export default {
 	name: 'TheHeader',
 	methods: {
-		toggleNavbar: function () {
+		toggleNavbar: function (e) {
 			this.$store.commit('navbar/toggle');
 			console.log(this.isOpen);
 		},
@@ -60,7 +60,9 @@ export default {
 		...mapMutations({ toggle: 'navbar/toggle' }),
 	},
 	computed: {
-		...mapGetters({ isOpen: 'navbar/getNavbarState' }),
+		isOpen() {
+			return this.$store.state.navbar.isOpen;
+		},
 	},
 	watch: {
 		$route() {
