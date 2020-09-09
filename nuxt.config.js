@@ -1,12 +1,20 @@
 import webpack from 'webpack';
 
 export default {
-  // mode: 'universal',
-  target: 'static',
-
   /*
-	 ** Headers of the page
-	 */
+  ** Nuxt rendering mode
+  ** See https://nuxtjs.org/api/configuration-mode
+  */
+  mode: 'universal',
+  /*
+  ** Nuxt target
+  ** See https://nuxtjs.org/api/configuration-target
+  */
+  target: 'static',
+  /*
+  ** Headers of the page
+  ** See https://nuxtjs.org/api/configuration-head
+  */
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -45,21 +53,19 @@ export default {
     ],
     script: []
   },
-
   /*
 	 ** Customize the link active class
 	 */
   router: {
+    middleware: 'i18n',
     linkActiveClass: 'text-gray-100',
   },
-
   /*
 	 ** Customize the progress-bar color
 	 */
   loading: {
     color: '#fff'
   },
-
   /*
 	 ** Global CSS
 	 */
@@ -68,29 +74,37 @@ export default {
     configPath: 'tailwind.config.js',
     exposeConfig: false
   },
-
-  /*
-	 ** Plugins to load before mounting the App
-	 */
-  plugins: [],
-
-  /*
-	 ** Nuxt.js dev-modules
-	 */
-  buildModules: [
-    '@nuxtjs/tailwindcss'
+	/*
+		** Global CSS
+		*/
+  css: [
   ],
-
-  /*
-  ** Autodiscoverable components
-  */
+	/*
+	** Plugins to load before mounting the App
+	** https://nuxtjs.org/guide/plugins
+	*/
+  plugins: [
+    '~/plugins/i18n.js'
+  ],
+	/*
+		** Auto import components
+		** See https://nuxtjs.org/api/configuration-components
+		*/
   components: [
     {
       path: '~/components/base/',
       prefix: 'base'
     },
   ],
-
+	/*
+	 ** Nuxt.js dev-modules
+	 */
+  buildModules: [
+    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module',
+    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+    '@nuxtjs/tailwindcss',
+  ],
 	/*
 	 ** Nuxt.js modules
 	 */
@@ -101,38 +115,26 @@ export default {
     'nuxt-i18n',
     'nuxt-purgecss',
   ],
-
 	/*
 	 ** Axios module configuration
 	 ** See https://axios.nuxtjs.org/options
 	 */
   axios: {},
-
-  i18n: {
-    locales: [{ code: 'es', iso: 'es-ES', file: 'es-MX.js' }, { code: 'en', iso: 'en-US', file: 'en-US.js' }],
-    defaultLocale: 'es',
-    fallbackLocale: 'en',
-    lazy: true,
-    langDir: 'lang/',
-    strategy: 'prefix',
-    rootRedirect: 'es/aboutme',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      fallbackLocale: 'en'
-    }
-  },
-
+  /*
+  ** Content module configuration
+  ** See https://content.nuxtjs.org/configuration
+  */
+  content: {},
 	/*
-	 ** Build configuration
-	 */
+		** Build configuration
+		** See https://nuxtjs.org/api/configuration-build/
+		*/
   build: {
     plugins: [
       new webpack.ProvidePlugin({
         // global modules
       })
     ],
-
 		/*
 		 ** You can extend webpack config here
 		 */
@@ -144,10 +146,9 @@ export default {
       }
     },
     extractCSS: true,
-
   },
-
   generate: {
+    routes: [],
     fallback: '404.html',
     fallback: true
   }
