@@ -59,11 +59,9 @@ export default {
 	methods: {
 		toggleNavbar: function () {
 			this.isOpen = !this.isOpen;
-			console.log(this.isOpen);
 		},
 		closeNavbar: function () {
 			this.isOpen = false;
-			console.log(this.isOpen);
 		},
 	},
 	computed: {
