@@ -1,29 +1,34 @@
 <template>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12 col-md-10 col-lg-6 mx-auto">
-				<div v-if="error.statusCode === 404">
-					<h1 class="text-center text-uppercase">
-						{{ $t('errors.not_found_title') }}
-					</h1>
+	<article>
+		<template v-if="error.statusCode === 404">
+			<header>
+				<base-heading class="uppercase lg:text-center">
+					{{ $t('errors.not_found_title') }}
+				</base-heading>
+				<img class="mx-auto my-5 d-block" width="250px" src="~@/assets/img/404.svg" alt="Page not found  image, a ghost being abducted." />
 
-					<img class="d-block mx-auto my-5" width="250px" src="~@/assets/img/404.svg" alt="Page not found  image, a ghost being abducted." />
+				<base-paragraph class="lg:text-center">
+					{{ $t('errors.not_found_message') }}
+				</base-paragraph>
+			</header>
+		</template>
 
-					<p class="text-center">
-						{{ $t('errors.not_found_message') }}
-					</p>
-				</div>
+		<template v-else>
+			<header>
+				<base-heading class="uppercase lg:text-center">
+					{{ $t('errors.error') }}
+				</base-heading>
+				<img class="mx-auto my-5 d-block" width="250px" src="~@/assets/img/404.svg" alt="Page not found  image, a ghost being abducted." />
 
-				<h1 v-else class="text-center text-uppercase">{{ $t('errors.error') }}</h1>
+				<base-paragraph class="lg:text-center"> </base-paragraph></header
+		></template>
 
-				<div class="col-sm-12 col-md-6 col-lg-4 mx-auto">
-					<nuxt-link :to="localePath({ name: 'aboutme' })" class="btn btn-link btn-block text-decoration-none text-center text-uppercase" role="button">
-						{{ $t('nav_links.go_home') }}
-					</nuxt-link>
-				</div>
-			</div>
+		<div class="mx-auto lg:w-4/12">
+			<base-button-link class="mt-6" href="aboutme">
+				{{ $t('nav_links.go_home') }}
+			</base-button-link>
 		</div>
-	</div>
+	</article>
 </template>
 
 <script>
@@ -32,8 +37,8 @@ export default {
 	props: ['error'],
 	head() {
 		return {
-			title: this.$t('errors.error')
+			title: this.$t('errors.error'),
 		};
-	}
+	},
 };
 </script>

@@ -28,6 +28,10 @@ export default {
 			title: this.$t('nav_links.about_me'),
 		};
 	},
+	paths: {
+		en: '/about-me',
+		es: '/sobre',
+	},
 };
 </script>
 

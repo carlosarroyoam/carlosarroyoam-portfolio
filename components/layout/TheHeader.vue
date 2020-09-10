@@ -5,7 +5,7 @@
 				<div class="flex flex-row items-center justify-between">
 					<nuxt-link :to="localePath({ name: 'aboutme' })" tag="a" class="text-sm uppercase sm:text-base lg:text-lg"> Carlos Alberto Arroyo Martínez </nuxt-link>
 
-					<button class="text-gray-100 lg:hidden" type="button" aria-label="Toggle navigation bar" v-on:click="toggle()">
+					<button class="text-gray-100 lg:hidden" type="button" aria-label="Toggle navigation bar" v-on:click="toggleNavbar()">
 						<svg class="block w-8 fill-current md:w-10" v-bind:class="{ hidden: isOpen }" viewBox="0 0 24 24">
 							<path d="M0 0h24v24H0z" fill="none" />
 							<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
@@ -16,6 +16,8 @@
 						</svg>
 					</button>
 				</div>
+
+				<nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
 
 				<nav class="text-xs font-semibold text-gray-500 uppercase lg:block sm:text-sm" id="mainNavbar" v-bind:class="{ hidden: !isOpen }">
 					<ul class="flex flex-col py-4 lg:py-0 lg:flex-row">
@@ -40,33 +42,33 @@
 			</div>
 		</header>
 
-		<div class="fixed inset-0 z-30 w-screen h-screen" v-bind:class="{ hidden: !isOpen }" v-on:click="toggle()"></div>
+		<div class="fixed inset-0 z-30 w-screen h-screen" v-bind:class="{ hidden: !isOpen }" v-on:click="toggleNavbar()"></div>
 	</div>
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+// import { mapGetters, mapMutations } from 'vuex';
 
 export default {
 	name: 'TheHeader',
+	data: function () {
+		return {
+			isOpen: false,
+		};
+	},
 	methods: {
-		toggleNavbar: function (e) {
-			this.$store.commit('navbar/toggle');
-			console.log(this.isOpen);
+		toggleNavbar: function () {
+			this.isOpen = !this.isOpen;
 		},
-		setLocale: function (locale) {
-			this.$i18n.locale = locale;
-		},
-		...mapMutations({ toggle: 'navbar/toggle' }),
 	},
 	computed: {
-		isOpen() {
-			return this.$store.state.navbar.isOpen;
+		availableLocales() {
+			return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
 		},
 	},
 	watch: {
 		$route() {
-			this.$store.commit('navbar/close');
+			this.toggleNavbar();
 		},
 	},
 };
