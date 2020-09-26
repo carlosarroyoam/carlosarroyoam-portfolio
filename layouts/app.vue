@@ -37,6 +37,12 @@ export default {
 					content: 'width=device-width, initial-scale=1',
 				},
 				{
+					hid: 'keywords',
+					name: 'keywords',
+					content:
+						'carlosarroyoam, Carlos Arroyo, Carlos Alberto Arroyo Martínez, Blog Programacion Queretaro, Desarrollo Web Querétaro, Diseño Web Querétaro, Desarrollo Web Querétaro, Paginas web Querétaro, Ingeniero en Informatica Querétaro, Tutoriales programacion',
+				},
+				{
 					name: 'author',
 					content: 'Carlos Alberto Arroyo Martínez',
 				},
@@ -51,16 +57,6 @@ export default {
 				{
 					name: 'X-UA-Compatible',
 					content: 'ie=edge',
-				},
-				{
-					hid: 'description',
-					name: 'description',
-					content: process.env.npm_package_description || '',
-				},
-				{
-					hid: 'keywords',
-					name: 'keywords',
-					content: 'carlosarroyoam, Carlos Arroyo, Carlos Alberto Arroyo Martínez, Blog Programacion Queretaro, Desarrollo Web Querétaro, Diseño Web Querétaro, Desarrollo Web Querétaro, Paginas web Querétaro, Ingeniero en Informatica Querétaro',
 				},
 				...i18nSeo.meta,
 			],

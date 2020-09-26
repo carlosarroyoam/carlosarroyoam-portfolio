@@ -21,7 +21,7 @@ export default {
 	head() {
 		return {
 			title: this.$t('nav_links.blog'),
-			meta: [{ hid: 'description', name: 'description', content: 'My custom description' }],
+			meta: [{ hid: 'description', name: 'description', content: 'Blog description' }],
 		};
 	},
 	async asyncData({ $content, params }) {

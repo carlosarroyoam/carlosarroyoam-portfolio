@@ -26,6 +26,7 @@ export default {
 	head() {
 		return {
 			title: this.$t('nav_links.about_me'),
+			meta: [{ hid: 'description', name: 'description', content: 'Home page description' }],
 		};
 	},
 	paths: {
