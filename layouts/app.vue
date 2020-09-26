@@ -37,6 +37,14 @@ export default {
 					content: 'width=device-width, initial-scale=1',
 				},
 				{
+					name: 'author',
+					content: 'Carlos Alberto Arroyo Martínez',
+				},
+				{
+					name: 'copyright',
+					content: 'Carlos Alberto Arroyo Martínez',
+				},
+				{
 					name: 'theme-color',
 					content: '#384247',
 				},
