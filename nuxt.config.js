@@ -84,11 +84,6 @@ export default {
     hostname: 'https://carlosarroyoam.github.io',
     path: '/sitemap.xml',
     lastmod: '2020-09-28',
-    i18n: true,
-    i18n: {
-      locales: ['en', 'es'],
-      routesNameSeparator: '___'
-    },
     sitemaps: [
       {
         path: '/sitemap-pages.xml'
@@ -108,7 +103,7 @@ export default {
             .only(['slug'])
             .fetch()
 
-          return articles.map((article) => article.slug)
+          return articles.map((article) => '/blog/article/' + article.slug)
         },
         exclude: ['/**']
       }
