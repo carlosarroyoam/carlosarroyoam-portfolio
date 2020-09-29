@@ -36,12 +36,6 @@ export default {
     exposeConfig: false
   },
   /*
-   ** @nuxtjs/sitemap config
-   */
-  sitemap: {
-    hostname: 'https://carlosarroyoam.github.io',
-  },
-  /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
@@ -62,7 +56,10 @@ export default {
     vueI18n: {
       fallbackLocale: 'en',
     },
-    rootRedirect: 'es/aboutme',
+    rootRedirect: {
+      statusCode: 301,
+      path: 'es/aboutme'
+    },
     strategy: 'prefix',
     seo: false,
     lazy: true,
@@ -79,10 +76,43 @@ export default {
         iso: 'en-US'
       },
     ],
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
+  },
+  /*
+   ** @nuxtjs/sitemap config
+   */
+  sitemap: {
+    hostname: 'https://carlosarroyoam.github.io',
+    path: '/sitemap.xml',
+    lastmod: '2020-09-28',
+    i18n: true,
+    i18n: {
+      locales: ['en', 'es'],
+      routesNameSeparator: '___'
     },
+    sitemaps: [
+      {
+        path: '/sitemap-pages.xml'
+      },
+      {
+        path: '/sitemap-projects.xml',
+        routes: ['foo/1', 'foo/2'],
+        exclude: ['/**']
+      },
+      {
+        path: '/sitemap-posts.xml',
+        routes: async () => {
+          const { $content } = require('@nuxt/content')
+
+          const articles = await $content('articles')
+            .sortBy('createdAt', 'asc')
+            .only(['slug'])
+            .fetch()
+
+          return articles.map((article) => article.slug)
+        },
+        exclude: ['/**']
+      }
+    ]
   },
   /*
    ** Nuxt.js dev-modules
@@ -98,13 +128,13 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    'nuxt-i18n',
+    'nuxt-purgecss',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
-    '@nuxtjs/sitemap',
-    'nuxt-i18n',
-    'nuxt-purgecss',
+    '@nuxtjs/sitemap'
   ],
   /*
    ** Axios module configuration
