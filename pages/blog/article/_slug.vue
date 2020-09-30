@@ -32,7 +32,14 @@ export default {
 	head() {
 		return {
 			title: this.article.title,
-			meta: [{ hid: 'description', name: 'description', content: this.article.description }],
+			meta: [
+				{ hid: 'description', name: 'description', content: this.article.description },
+				{
+					hid: 'keywords',
+					name: 'keywords',
+					content: ['Blog de desarrollo web', 'Blog de tecnología', 'Blog de programación'],
+				},
+			],
 		};
 	},
 	async asyncData({ $content, params }) {

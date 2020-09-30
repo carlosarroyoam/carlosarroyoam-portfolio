@@ -2,7 +2,7 @@
 	<article class="mx-auto lg:w-10/12">
 		<header>
 			<base-heading class="uppercase lg:text-center">{{ $t('nav_links.blog') }}</base-heading>
-			<base-paragraph class="lg:text-center">Encuentra artículos interesantes ¡Cada Semana! ❤️</base-paragraph>
+			<base-paragraph class="lg:text-center">Encuentra artículos interesantes sobre tecnología, desarrollo de software y diseño de UI ¡Cada Semana! ❤️</base-paragraph>
 		</header>
 
 		<ArticlesList v-bind:articles="articles" />
@@ -21,7 +21,18 @@ export default {
 	head() {
 		return {
 			title: this.$t('nav_links.blog'),
-			meta: [{ hid: 'description', name: 'description', content: 'Blog description' }],
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'Encuentra artículos interesantes sobre tecnología, desarrollo de software y diseño de UI ¡Cada Semana! ❤️.',
+				},
+				{
+					hid: 'keywords',
+					name: 'keywords',
+					content: ['Blog de desarrollo web', 'Blog de tecnología', 'Blog de programación'],
+				},
+			],
 		};
 	},
 	async asyncData({ $content, params }) {

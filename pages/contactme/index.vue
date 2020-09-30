@@ -36,6 +36,13 @@ export default {
 	head() {
 		return {
 			title: this.$t('nav_links.contact_me'),
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: '¿Tienes algún proyecto en el que podamos trabajar juntos? No dudes en ponerte en contacto conmigo. ¡Hagamos realidad tu increíble proyecto!.',
+				},
+			],
 		};
 	},
 };

@@ -36,6 +36,13 @@ export default {
 	head() {
 		return {
 			title: this.$t('nav_links.resume'),
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: '¿Quieres saber un poco mas de mi y de mi carrera profesional? Revisa mi curriculum.',
+				},
+			],
 		};
 	},
 };

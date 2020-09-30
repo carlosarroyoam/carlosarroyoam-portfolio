@@ -30,6 +30,13 @@ export default {
 	head() {
 		return {
 			title: this.$t('nav_links.portfolio'),
+			meta: [
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'Conoce los proyectos de desarrollo de software que he realizado.',
+				},
+			],
 		};
 	},
 	async asyncData({ $content, params }) {
