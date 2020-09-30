@@ -51,6 +51,10 @@ export default {
 					content: 'Carlos Alberto Arroyo Martínez',
 				},
 				{
+					name: 'robots',
+					content: 'all',
+				},
+				{
 					name: 'theme-color',
 					content: '#384247',
 				},
