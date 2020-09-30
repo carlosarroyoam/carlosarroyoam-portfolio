@@ -113,7 +113,7 @@ export default {
    ** @nuxtjs/google-analytics config
    */
   googleAnalytics: {
-    id: 'UA-146229848-1'
+    id: 'UA-179391186-1'
   },
   /*
    ** Nuxt.js dev-modules
