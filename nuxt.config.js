@@ -110,14 +110,18 @@ export default {
     ]
   },
   /*
+   ** @nuxtjs/google-analytics config
+   */
+  googleAnalytics: {
+    id: 'UA-146229848-1'
+  },
+  /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-146229848-1'
-    }]
+    '@nuxtjs/google-analytics',
   ],
   /*
    ** Nuxt.js modules

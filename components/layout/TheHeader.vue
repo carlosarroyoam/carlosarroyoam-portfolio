@@ -16,8 +16,8 @@
 						</svg>
 					</button>
 				</div>
-
-				<nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
+				<!--
+				<nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link> -->
 
 				<nav class="text-xs font-semibold text-gray-500 uppercase lg:block sm:text-sm" id="mainNavbar" v-bind:class="isOpen ? 'block' : 'hidden'">
 					<ul class="flex flex-col py-4 lg:py-0 lg:flex-row">
