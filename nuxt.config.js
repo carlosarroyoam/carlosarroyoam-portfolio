@@ -14,6 +14,7 @@ export default {
    ** Customize the link active class
    */
   router: {
+    trailingSlash: true,
     linkActiveClass: 'text-gray-100',
   },
   /*
@@ -77,8 +78,9 @@ export default {
    */
   sitemap: {
     hostname: 'https://carlosarroyoam.github.io',
-    i18n: true,
     path: '/sitemap.xml',
+    trailingSlash: true,
+    i18n: true,
     defaults: {
       changefreq: 'weekly',
       priority: 1,
