@@ -9,6 +9,6 @@ author:
     image: https://avatars2.githubusercontent.com/u/43684710?s=460&u=856d9f5fc4cf91546012bc18ba1d11ac05911723&v=4
 ---
 
-# My first blog post
+## My first blog post
 
 Welcome to my first blog post using content module
