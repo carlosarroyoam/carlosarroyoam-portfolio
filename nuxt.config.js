@@ -1,10 +1,5 @@
 export default {
   /*
-  ** Nuxt rendering mode
-  ** See https://nuxtjs.org/api/configuration-mode
-  */
-  mode: 'universal',
-  /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
   */
@@ -58,7 +53,7 @@ export default {
     },
     rootRedirect: {
       statusCode: 301,
-      path: 'es/aboutme/'
+      path: 'es/aboutme'
     },
     strategy: 'prefix',
     seo: false,
@@ -82,28 +77,33 @@ export default {
    */
   sitemap: {
     hostname: 'https://carlosarroyoam.github.io',
+    i18n: true,
     path: '/sitemap.xml',
-    lastmod: '2020-09-28',
+    defaults: {
+      changefreq: 'weekly',
+      priority: 1,
+      lastmod: '2020-09-28',
+    },
     sitemaps: [
       {
         path: '/sitemap-pages.xml'
       },
       {
         path: '/sitemap-projects.xml',
-        routes: ['foo/1', 'foo/2'],
+        routes: [],
         exclude: ['/**']
       },
       {
-        path: '/sitemap-posts.xml',
+        path: '/sitemap-articles.xml',
         routes: async () => {
-          const { $content } = require('@nuxt/content')
+          const { $content } = require('@nuxt/content');
 
           const articles = await $content('articles')
             .sortBy('createdAt', 'asc')
             .only(['slug'])
-            .fetch()
+            .fetch();
 
-          return articles.map((article) => '/blog/article/' + article.slug)
+          return articles.map((article) => 'es/blog/article/' + article.slug);
         },
         exclude: ['/**']
       }
