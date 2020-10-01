@@ -105,7 +105,7 @@ export default {
             .only(['slug'])
             .fetch();
 
-          return articles.map((article) => 'es/blog/article/' + article.slug);
+          return articles.map((article) => 'es/blog/article/' + article.slug + '/');
         },
         exclude: ['/**']
       }
