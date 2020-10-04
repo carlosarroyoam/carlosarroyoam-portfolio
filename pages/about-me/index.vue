@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import TheHero from '~/components/aboutme/TheHero';
-import TheTechnologiesResume from '~/components/aboutme/TheTechnologiesResume';
-import TheWorkTogetherButton from '~/components/aboutme/TheWorkTogetherButton';
+import TheHero from '~/components/about-me/TheHero';
+import TheTechnologiesResume from '~/components/about-me/TheTechnologiesResume';
+import TheWorkTogetherButton from '~/components/about-me/TheWorkTogetherButton';
 
 export default {
 	name: 'AboutMe',

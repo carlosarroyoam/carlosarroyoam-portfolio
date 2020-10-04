@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import TheSocialContainer from '~/components/contactme/TheSocialContainer';
+import TheSocialContainer from '~/components/contact-me/TheSocialContainer';
 
 export default {
 	name: 'ContactMe',
