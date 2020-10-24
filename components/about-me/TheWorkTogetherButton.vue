@@ -5,7 +5,7 @@
 			<span class="text-primary">proyectos increíbles</span>
 		</p>
 
-		<base-button-link class="mt-4 lg:mt-0" href="contactme">
+		<base-button-link class="mt-4 lg:mt-0" href="contact-me">
 			{{ $t('nav_links.contact_me') }}
 		</base-button-link>
 	</section>
