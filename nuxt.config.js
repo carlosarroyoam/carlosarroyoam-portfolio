@@ -54,7 +54,7 @@ export default {
     },
     rootRedirect: {
       statusCode: 301,
-      path: 'es/aboutme/'
+      path: 'es/about-me/'
     },
     strategy: 'prefix',
     seo: false,
