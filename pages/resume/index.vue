@@ -7,7 +7,7 @@
 				</header>
 
 				<div class="lg:w-5/12">
-					<a href="/resources/cv-webversion-es.pdf" target="_blank" class="flex flex-row items-center justify-center px-12 py-2 mt-4 text-base text-center text-gray-100 uppercase rounded lg:mt-0 bg-primary">
+					<a href="/resources/Carlos Alberto Arroyo Martínez - cv-webversion-es.pdf" target="_blank" class="flex flex-row items-center justify-center px-12 py-2 mt-4 text-base text-center text-gray-100 uppercase rounded lg:mt-0 bg-primary">
 						Descargar versión PDF
 						<svg class="w-5 h-5 ml-4 fill-current" viewBox="0 0 512 512">
 							<path
