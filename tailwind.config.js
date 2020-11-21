@@ -8,32 +8,21 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          'Lato',
-        ],
+        display: ['Montserrat', 'sans-serif'],
+        body: ['Open Sans', 'system-ui', 'sans-serif'],
       },
       colors: {
-        background: 'var(--color-background)',
-        'background-secondary': 'var(--color-background-secondary)',
-        header: 'var(--color-header)',
-        footer: 'var(--color-footer)',
-        primary: 'var(--color-primary)',
-        'primary-hover': 'var(--color-primary-hover)',
-        'primary-disabled': 'var(--color-primary-disabled)',
-        secondary: 'var(--color-secondary)',
-        'secondary-hover': 'var(--color-secondary-hover)',
-        'secondary-disabled': 'var(--color-secondary-disabled)',
-        heading: 'var(--color-text-heading)',
-        'heading-secondary': 'var(--color-text-heading-secondary)',
-        body: 'var(--color-text-body)',
-        'body-secondary': 'var(--color-text-body-secondary)',
+        primary: '#3182ce',
+        background: '#eeeeee',
+        surface: {
+          default: '#e3e3e3',
+          secondary: '#ffffff',
+          header: '#37474f',
+        },
       },
       container: {
         center: true,
         padding: '1rem',
-      },
-      borderRadius: {
-        default: '0.125rem',
       },
     },
   },

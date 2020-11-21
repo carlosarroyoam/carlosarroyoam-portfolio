@@ -3,7 +3,7 @@
 		<div class="mx-auto lg:w-9/12">
 			<div class="flex flex-col lg:mt-2 lg:flex-row lg:items-center lg:justify-between">
 				<header>
-					<base-heading class="uppercase lg:text-center">{{ $t('nav_links.resume') }}</base-heading>
+					<h1 class="uppercase lg:text-center">{{ $t('nav_links.resume') }}</h1>
 				</header>
 
 				<div class="lg:w-5/12">

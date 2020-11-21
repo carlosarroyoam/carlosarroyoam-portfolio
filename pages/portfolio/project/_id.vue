@@ -1,7 +1,7 @@
 <template>
 	<article>
 		<header>
-			<base-heading class="uppercase lg:text-center">Project title</base-heading>
+			<h1 class="uppercase lg:text-center">Project title</h1>
 		</header>
 
 		{{ id }}

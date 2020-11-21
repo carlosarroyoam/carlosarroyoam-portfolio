@@ -2,11 +2,9 @@
 	<article>
 		<TheHero />
 
-		<div class="mx-auto lg:w-9/12">
-			<TheTechnologiesResume class="mt-8" />
+		<!-- <TheTechnologiesResume class="mt-12" /> -->
 
-			<TheWorkTogetherButton class="mt-10" />
-		</div>
+		<!-- <TheWorkTogetherButton class="mt-16" /> -->
 	</article>
 </template>
 
@@ -42,9 +40,3 @@ export default {
 	},
 };
 </script>
-
-<style lang="scss" scoped>
-.custom-line-height {
-	line-height: 1.3;
-}
-</style>

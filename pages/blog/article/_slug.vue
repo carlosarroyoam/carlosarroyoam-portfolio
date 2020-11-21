@@ -1,8 +1,8 @@
 <template>
 	<article>
 		<header>
-			<base-heading class="uppercase lg:text-center">{{ article.title }}</base-heading>
-			<base-paragraph class="md:text-center">{{ article.description }}</base-paragraph>
+			<h1 class="uppercase lg:text-center">{{ article.title }}</h1>
+			<p class="md:text-center">{{ article.description }}</p>
 		</header>
 
 		<img :src="article.img" :alt="article.alt" />

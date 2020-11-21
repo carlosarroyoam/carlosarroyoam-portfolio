@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col min-h-screen pt-20 text-sm antialiased theme-light bg-background text-body">
+	<div class="flex flex-col min-h-screen pt-16 antialiased md:pt-24 theme-light bg-background">
 		<TheHeader />
 		<TheMain>
 			<nuxt />

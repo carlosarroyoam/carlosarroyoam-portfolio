@@ -1,22 +1,26 @@
 <template>
-	<article class="mx-auto lg:w-10/12">
-		<header>
-			<base-heading class="uppercase lg:text-center">{{ $t('nav_links.blog') }}</base-heading>
-			<base-paragraph class="lg:text-center">Encuentra artículos interesantes sobre tecnología, desarrollo de software y diseño de UI ¡Cada Semana! ❤️</base-paragraph>
-		</header>
+	<article>
+		<div class="lg:w-6/12">
+			<header>
+				<app-heading-1>{{ $t('nav_links.blog') }}</app-heading-1>
+				<app-paragraph>Encuentra artículos interesantes sobre tecnología, desarrollo de software y diseño de UI ¡Cada Semana! ❤️</app-paragraph>
+			</header>
+		</div>
 
-		<ArticlesList v-bind:articles="articles" />
+		<!-- <ArticlesList v-bind:articles="articles" /> -->
 	</article>
 </template>
 
 <script>
 import ArticlesList from '~/components/blog/ArticlesList';
+import Heading1 from '~/components/commons/button/Heading1.vue';
+import Paragraph from '~/components/commons/button/Paragraph.vue';
 
 export default {
 	name: 'Blog',
 	layout: 'app',
 	components: {
-		ArticlesList,
+		ArticlesList
 	},
 	head() {
 		return {

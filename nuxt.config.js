@@ -15,13 +15,7 @@ export default {
    */
   router: {
     trailingSlash: true,
-    linkActiveClass: 'text-gray-100',
-  },
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: {
-    color: '#fff'
+    linkActiveClass: 'text-gray-100 font-semibold tracking-wide',
   },
   /*
    ** Global CSS
@@ -43,9 +37,9 @@ export default {
     */
   components: [
     {
-      path: '~/components/base/',
-      prefix: 'base'
-    },
+      path: '~/components/commons/button',
+      prefix: 'app'
+    }
   ],
   i18n: {
     defaultLocale: 'es',

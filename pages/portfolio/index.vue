@@ -1,28 +1,31 @@
 <template>
 	<article>
-		<div class="mx-auto lg:w-9/12">
+		<div class="lg:w-6/12">
 			<header>
-				<base-heading class="uppercase lg:text-center"> {{ $t('nav_links.portfolio') }} </base-heading>
-				<base-paragraph class="lg:text-center"
-					><strong>Whoops! Todavía me encuentro construyendo esta sección.</strong><br />
+				<app-heading-1>{{ $t('nav_links.portfolio') }}</app-heading-1>
+				<app-paragraph class="max-w-3xl">
+					<strong>Whoops! Todavía me encuentro construyendo esta sección.</strong><br />
 					Pronto estará lista :) Si quieres ver algo de mi trabajo puedes ir a mi perfil en
 					<a class="text-center font-weight-bold text-decoration-none" target="_blank" rel="nofollow" href="https://github.com/carlosarroyoam/">GitHub</a>
-					ahí encontraras mucho código.</base-paragraph
-				>
+					ahí encontraras mucho código.
+				</app-paragraph>
 			</header>
+
 			<ProjectsList v-bind:projects="projects" />
 		</div>
 	</article>
 </template>
 
 <script>
+import Heading1 from '~/components/commons/button/Heading1.vue';
+import Paragraph from '~/components/commons/button/Paragraph.vue';
 import ProjectsList from '~/components/portfolio/ProjectsList';
 
 export default {
 	name: 'Portfolio',
 	layout: 'app',
 	components: {
-		ProjectsList,
+		ProjectsList
 	},
 	data() {
 		return {};

@@ -1,34 +1,23 @@
 <template>
 	<section>
-		<base-heading-secondary class="uppercase md:text-center">Technical Skills</base-heading-secondary>
-		<base-paragraph class="md:text-center"
-			>A lo largo de mi carrera he desarrollado aplicaciones web y móviles con las siguientes tecnologías. Además, constantemente estoy formándome, y siempre estoy abierto a aprender nuevos lenguajes y adquirir más conocimientos.</base-paragraph
-		>
+		<app-heading-2 class="mx-auto text-center">Technical Skills</app-heading-2>
 
-		<div class="grid gap-4 mt-5 lg:grid-cols-3">
-			<div class="my-4 overflow-hidden rounded shadow bg-background-secondary" :key="technical_skills.title" v-for="development_area in technical_skills">
-				<div class="flex flex-row items-start justify-start p-4 bg-primary">
-					<img class="inline-block w-12 h-12" v-bind:src="require('~/assets/img/icons/' + development_area.icon)" v-bind:alt="development_area.icon_alt" />
-					<p class="inline-block ml-4 text-base text-gray-100 uppercase">
-						{{ development_area.title }}
-					</p>
-				</div>
-
-				<ul class="px-6 py-4">
-					<li :key="technology" v-for="technology in development_area.technologies">
-						{{ technology }}
-					</li>
-				</ul>
-			</div>
+		<div class="grid gap-6 mt-8 lg:mx-auto lg:w-7/12 lg:grid-cols-3">
+			<TechnologiesCard :key="technical_skills.title" v-for="development_area in technical_skills" :development_area="development_area" />
 		</div>
 	</section>
 </template>
 
 <script>
+import TechnologiesCard from '~/components/about-me/TechnologiesCard'
 import technichalSkillsJson from '~/data/technical_skills.json';
+import Heading2 from '../commons/button/Heading2.vue';
 
 export default {
-	name: 'TheTechnologiesResume',
+  name: 'TheTechnologiesResume',
+  components: {
+    TechnologiesCard
+  },
 	data() {
 		return {
 			technical_skills: technichalSkillsJson.technical_skills,
