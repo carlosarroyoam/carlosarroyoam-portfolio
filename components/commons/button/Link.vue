@@ -23,10 +23,6 @@ export default {
 		href: {
 			type: String,
 			required: true
-		},
-		disabled: {
-			type: Boolean,
-			default: false
 		}
 	}
 };
