@@ -2,11 +2,17 @@
 	<article>
 		<div class="lg:w-6/12">
 			<header>
-				<app-heading-1>Conecta conmigo</app-heading-1>
+				<app-heading>Conecta conmigo</app-heading>
 				<app-paragraph class="max-w-3xl"
-					>Si tienes alguna pregunta, una oportunidad de trabajo o simplemente deseas saludarme, no dudes en ponerte en contacto conmigo. A continuación están mi correo electrónico, curriculum vitae y mis páginas sociales.</app-paragraph
+					>Si tienes alguna pregunta, una oportunidad de trabajo o simplemente
+					deseas saludarme, no dudes en ponerte en contacto conmigo. A
+					continuación están mi correo electrónico, curriculum vitae y mis
+					páginas sociales.</app-paragraph
 				>
-				<a href="mailto:carlosarroyoam@gmail.com" class="inline-flex items-center flex-grow-0 px-4 py-2 mt-6 text-base text-center text-gray-100 uppercase rounded bg-primary">
+				<a
+					href="mailto:carlosarroyoam@gmail.com"
+					class="inline-flex items-center flex-grow-0 px-4 py-2 mt-6 text-base text-center text-gray-100 uppercase rounded bg-primary"
+				>
 					Enviar un email
 					<svg class="w-5 h-5 ml-4 fill-current" viewBox="0 0 512 512">
 						<path
@@ -22,7 +28,6 @@
 </template>
 
 <script>
-import Paragraph from '~/components/commons/button/Paragraph.vue';
 import TheSocialContainer from '~/components/contact-me/TheSocialContainer';
 
 export default {
@@ -38,10 +43,11 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: '¿Tienes algún proyecto en el que podamos trabajar juntos? No dudes en ponerte en contacto conmigo. ¡Hagamos realidad tu increíble proyecto!.',
-				},
-			],
+					content:
+						'¿Tienes algún proyecto en el que podamos trabajar juntos? No dudes en ponerte en contacto conmigo. ¡Hagamos realidad tu increíble proyecto!.'
+				}
+			]
 		};
-	},
+	}
 };
 </script>

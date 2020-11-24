@@ -2,8 +2,11 @@
 	<article>
 		<div class="lg:w-6/12">
 			<header>
-				<app-heading-1>{{ $t('nav_links.blog') }}</app-heading-1>
-				<app-paragraph>Encuentra artículos interesantes sobre tecnología, desarrollo de software y diseño de UI ¡Cada Semana! ❤️</app-paragraph>
+				<app-heading>{{ $t('nav_links.blog') }}</app-heading>
+				<app-paragraph
+					>Encuentra artículos interesantes sobre tecnología, desarrollo de
+					software y diseño de UI ¡Cada Semana! ❤️</app-paragraph
+				>
 			</header>
 		</div>
 
@@ -13,8 +16,6 @@
 
 <script>
 import ArticlesList from '~/components/blog/ArticlesList';
-import Heading1 from '~/components/commons/button/Heading1.vue';
-import Paragraph from '~/components/commons/button/Paragraph.vue';
 
 export default {
 	name: 'Blog',
@@ -29,22 +30,32 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Encuentra artículos interesantes sobre tecnología, desarrollo de software y diseño de UI ¡Cada Semana! ❤️.',
+					content:
+						'Encuentra artículos interesantes sobre tecnología, desarrollo de software y diseño de UI ¡Cada Semana! ❤️.'
 				},
 				{
 					hid: 'keywords',
 					name: 'keywords',
-					content: ['Blog de desarrollo web', 'Blog de tecnología', 'Blog de programación'],
-				},
-			],
+					content: [
+						'Blog de desarrollo web',
+						'Blog de tecnología',
+						'Blog de programación'
+					]
+				}
+			]
 		};
 	},
 	async asyncData({ $content, params }) {
-		const articles = await $content('articles').only(['title', 'description', 'img', 'slug', 'author']).sortBy('createdAt', 'asc').limit(5).skip(0).fetch();
+		const articles = await $content('articles')
+			.only(['title', 'description', 'img', 'slug', 'author'])
+			.sortBy('createdAt', 'asc')
+			.limit(5)
+			.skip(0)
+			.fetch();
 
 		return {
-			articles,
+			articles
 		};
-	},
+	}
 };
 </script>

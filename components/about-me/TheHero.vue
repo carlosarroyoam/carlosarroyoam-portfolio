@@ -3,7 +3,7 @@
 		<small class="text-xs tracking-wider text-gray-800 uppercase font-display"
 			>presentación</small
 		>
-		<app-display-1>Desarrollador de Software</app-display-1>
+		<app-display>Desarrollador de Software</app-display>
 		<app-paragraph>
 			Con más de 5 años de experiencia construyendo software que resuelve
 			problemas reales. Apasionado por la tecnologia. Cuento con sólidos

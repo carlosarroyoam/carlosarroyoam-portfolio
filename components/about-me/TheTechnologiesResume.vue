@@ -1,26 +1,30 @@
 <template>
 	<section>
-		<app-heading-2 class="mx-auto text-center">Technical Skills</app-heading-2>
+		<app-heading class="mx-auto text-center">Technical Skills</app-heading>
 
 		<div class="grid gap-6 mt-8 lg:mx-auto lg:w-7/12 lg:grid-cols-3">
-			<TechnologiesCard v-bind:key="development_area.title" v-for="development_area in technical_skills" :development_area="development_area" />
+			<TechnologiesCard
+				v-bind:key="development_area.title"
+				v-for="development_area in technical_skills"
+				:development_area="development_area"
+			/>
 		</div>
 	</section>
 </template>
 
 <script>
-import TechnologiesCard from '~/components/about-me/TechnologiesCard'
+import TechnologiesCard from '~/components/about-me/TechnologiesCard';
 import technichalSkillsJson from '~/data/technical_skills.json';
 
 export default {
-  name: 'TheTechnologiesResume',
-  components: {
-    TechnologiesCard
-  },
+	name: 'TheTechnologiesResume',
+	components: {
+		TechnologiesCard
+	},
 	data() {
 		return {
-			technical_skills: technichalSkillsJson.technical_skills,
+			technical_skills: technichalSkillsJson.technical_skills
 		};
-	},
+	}
 };
 </script>
