@@ -1,17 +1,41 @@
 <template>
 	<div>
-		<header class="fixed inset-x-0 top-0 z-40 text-gray-100 shadow bg-surface-header">
-			<div class="container flex flex-col py-2 lg:justify-between lg:items-center lg:py-4 lg:flex-row">
+		<header
+			class="fixed inset-x-0 top-0 z-40 text-gray-100 shadow bg-surface-header"
+		>
+			<div
+				class="container flex flex-col py-2 lg:justify-between lg:items-center lg:py-4 lg:flex-row"
+			>
 				<div class="flex flex-row items-center justify-between">
-					<nuxt-link :to="localePath({ name: 'about-me' })" tag="a" class="text-sm font-semibold tracking-wider uppercase font-display sm:text-base lg:text-lg">Carlos Alberto Arroyo Martínez</nuxt-link>
+					<nuxt-link
+						:to="localePath({ name: 'about-me' })"
+						tag="a"
+						class="text-sm font-medium tracking-wider uppercase font-display sm:text-base lg:text-lg"
+						>Carlos Alberto Arroyo Martínez</nuxt-link
+					>
 
-					<button class="text-gray-100 lg:hidden" type="button" aria-label="Toggle navigation bar" v-on:click="toggleNavbar()">
-						<svg class="w-8 fill-current md:w-10" v-bind:class="isOpen ? 'hidden' : 'block'" viewBox="0 0 24 24">
+					<button
+						class="text-gray-100 lg:hidden"
+						type="button"
+						aria-label="Toggle navigation bar"
+						v-on:click="toggleNavbar()"
+					>
+						<svg
+							class="w-8 fill-current md:w-10"
+							v-bind:class="isOpen ? 'hidden' : 'block'"
+							viewBox="0 0 24 24"
+						>
 							<path d="M0 0h24v24H0z" fill="none" />
 							<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
 						</svg>
-						<svg class="w-8 fill-current md:w-10" v-bind:class="isOpen ? 'block' : 'hidden'" viewBox="0 0 24 24">
-							<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+						<svg
+							class="w-8 fill-current md:w-10"
+							v-bind:class="isOpen ? 'block' : 'hidden'"
+							viewBox="0 0 24 24"
+						>
+							<path
+								d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+							/>
 							<path d="M0 0h24v24H0z" fill="none" />
 						</svg>
 					</button>
@@ -19,30 +43,48 @@
 				<!--
 				<nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link> -->
 
-				<nav class="text-sm text-gray-500 uppercase font-display lg:block" id="mainNavbar" v-bind:class="isOpen ? 'block' : 'hidden'">
-					<ul class="flex flex-col pt-4 space-y-4 lg:py-0 lg:flex-row lg:space-x-6 lg:space-y-0">
+				<nav
+					class="text-sm text-gray-500 uppercase font-display lg:block"
+					id="mainNavbar"
+					v-bind:class="isOpen ? 'block' : 'hidden'"
+				>
+					<ul
+						class="flex flex-col pt-4 space-y-4 lg:py-0 lg:flex-row lg:space-x-6 lg:space-y-0"
+					>
 						<!-- About me -->
 						<nuxt-link :to="localePath({ name: 'about-me' })" tag="li">
-							<a class="block hover:text-gray-100">{{ $t('nav_links.about_me') }}</a>
+							<a class="block hover:text-gray-100">{{
+								$t('nav_links.about_me')
+							}}</a>
 						</nuxt-link>
 						<!-- Portfolio -->
 						<nuxt-link :to="localePath({ name: 'portfolio' })" tag="li">
-							<a class="block hover:text-gray-100">{{ $t('nav_links.portfolio') }}</a>
+							<a class="block hover:text-gray-100">{{
+								$t('nav_links.portfolio')
+							}}</a>
 						</nuxt-link>
 						<!-- Contact me -->
 						<nuxt-link :to="localePath({ name: 'contact-me' })" tag="li">
-							<a class="block hover:text-gray-100">{{ $t('nav_links.contact_me') }}</a>
+							<a class="block hover:text-gray-100">{{
+								$t('nav_links.contact_me')
+							}}</a>
 						</nuxt-link>
 						<!-- Blog -->
 						<nuxt-link :to="localePath({ name: 'blog' })" tag="li">
-							<a class="block hover:text-gray-100">{{ $t('nav_links.blog') }}</a>
+							<a class="block hover:text-gray-100">{{
+								$t('nav_links.blog')
+							}}</a>
 						</nuxt-link>
 					</ul>
 				</nav>
 			</div>
 		</header>
 
-		<div class="fixed inset-0 z-30 w-screen h-screen" v-bind:class="isOpen ? 'block' : 'hidden'" v-on:click="closeNavbar()"></div>
+		<div
+			class="fixed inset-0 z-30 w-screen h-screen"
+			v-bind:class="isOpen ? 'block' : 'hidden'"
+			v-on:click="closeNavbar()"
+		></div>
 	</div>
 </template>
 
@@ -51,31 +93,31 @@
 
 export default {
 	name: 'TheHeader',
-	data: function () {
+	data: function() {
 		return {
-			isOpen: false,
+			isOpen: false
 		};
 	},
 	methods: {
-		toggleNavbar: function () {
+		toggleNavbar: function() {
 			this.isOpen = !this.isOpen;
 		},
-		closeNavbar: function () {
+		closeNavbar: function() {
 			this.isOpen = false;
-		},
+		}
 	},
 	computed: {
 		availableLocales() {
 			return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
-		},
+		}
 	},
 	watch: {
 		$route() {
 			this.closeNavbar();
-		},
+		}
 	},
 	async fetch() {
 		this.isOpen = false;
-	},
+	}
 };
 </script>

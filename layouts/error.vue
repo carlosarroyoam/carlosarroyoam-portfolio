@@ -1,11 +1,15 @@
 <template>
 	<article class="flex flex-col items-center">
 		<header>
-			<app-heading-1 class="lg:text-center">
+			<app-heading class="lg:text-center">
 				{{ $t('errors.not_found_title') }}
-			</app-heading-1>
+			</app-heading>
 
-			<img class="w-64 mx-auto my-5 d-block" src="~@/assets/img/404.svg" alt="Page not found  image, a ghost being abducted." />
+			<img
+				class="w-64 mx-auto my-5 d-block"
+				src="~@/assets/img/404.svg"
+				alt="Page not found image, a ghost being abducted."
+			/>
 
 			<app-paragraph class="lg:text-center">
 				{{ $t('errors.not_found_message') }}
@@ -24,8 +28,8 @@ export default {
 	props: ['error'],
 	head() {
 		return {
-			title: this.$t('errors.error'),
+			title: this.$t('errors.error')
 		};
-	},
+	}
 };
 </script>

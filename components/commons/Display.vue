@@ -13,7 +13,6 @@ export default {
 	props: {
 		tag: {
 			type: String,
-			required: true,
 			default: 'h1',
 			validator: function(value) {
 				return ['h1', 'h2'].indexOf(value) !== -1;

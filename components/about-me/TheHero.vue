@@ -1,6 +1,6 @@
 <template>
 	<section class="relative flex flex-col">
-		<small class="text-xs tracking-wider text-gray-800 uppercase font-display"
+		<small class="text-xs tracking-widest text-gray-800 uppercase font-body"
 			>presentación</small
 		>
 		<app-display>Desarrollador de Software</app-display>

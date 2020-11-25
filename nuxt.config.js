@@ -14,7 +14,7 @@ export default {
 	 */
 	router: {
 		trailingSlash: true,
-		linkActiveClass: 'text-gray-100 font-semibold tracking-wide'
+		linkActiveClass: 'text-gray-100 font-medium tracking-wide'
 	},
 	/*
 	 ** Global CSS
@@ -35,7 +35,7 @@ export default {
 	 */
 	components: [
 		{
-			path: '~/components/commons/button',
+			path: '~/components/commons',
 			prefix: 'app'
 		}
 	],
