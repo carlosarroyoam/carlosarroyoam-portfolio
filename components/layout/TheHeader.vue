@@ -40,8 +40,6 @@
 						</svg>
 					</button>
 				</div>
-				<!--
-				<nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link> -->
 
 				<nav
 					class="text-sm text-gray-500 uppercase font-display lg:block"
@@ -49,32 +47,27 @@
 					v-bind:class="isOpen ? 'block' : 'hidden'"
 				>
 					<ul
-						class="flex flex-col pt-4 space-y-4 lg:py-0 lg:flex-row lg:space-x-6 lg:space-y-0"
+						class="flex flex-col py-4 space-y-4 lg:py-0 lg:flex-row lg:space-x-6 lg:space-y-0"
 					>
 						<!-- About me -->
-						<nuxt-link :to="localePath({ name: 'about-me' })" tag="li">
-							<a class="block hover:text-gray-100">{{
-								$t('nav_links.about_me')
-							}}</a>
-						</nuxt-link>
+						<app-navlink href="about-me">
+							{{ $t('nav_links.about_me') }}
+						</app-navlink>
+
 						<!-- Portfolio -->
-						<nuxt-link :to="localePath({ name: 'portfolio' })" tag="li">
-							<a class="block hover:text-gray-100">{{
-								$t('nav_links.portfolio')
-							}}</a>
-						</nuxt-link>
+						<app-navlink href="portfolio">
+							{{ $t('nav_links.portfolio') }}
+						</app-navlink>
+
 						<!-- Contact me -->
-						<nuxt-link :to="localePath({ name: 'contact-me' })" tag="li">
-							<a class="block hover:text-gray-100">{{
-								$t('nav_links.contact_me')
-							}}</a>
-						</nuxt-link>
+						<app-navlink href="contact-me">
+							{{ $t('nav_links.contact_me') }}
+						</app-navlink>
+
 						<!-- Blog -->
-						<nuxt-link :to="localePath({ name: 'blog' })" tag="li">
-							<a class="block hover:text-gray-100">{{
-								$t('nav_links.blog')
-							}}</a>
-						</nuxt-link>
+						<app-navlink href="blog">
+							{{ $t('nav_links.blog') }}
+						</app-navlink>
 					</ul>
 				</nav>
 			</div>
@@ -89,8 +82,6 @@
 </template>
 
 <script>
-// import { mapGetters, mapMutations } from 'vuex';
-
 export default {
 	name: 'TheHeader',
 	data: function() {
