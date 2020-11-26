@@ -15,6 +15,7 @@
 			<section class="flex flex-row space-x-20 place-self-center md:space-x-5">
 				<a
 					href="mailto:carlosarroyoam@gmail.com"
+					aria-label="Send a email to Carlos Alberto Arroyo Martínez"
 					class="flex flex-col items-center text-gray-700 hover:text-primary"
 				>
 					<svg class="w-6 h-6 mr-1 fill-current" viewBox="0 0 512 512">
@@ -27,7 +28,8 @@
 				<a
 					target="_blank"
 					href="https://www.linkedin.com/in/carlosarroyoam/"
-					rel="nofollow"
+					rel="noreferrer"
+					aria-label="Carlos Alberto Arroyo Martínez's linkedin profile"
 					class="flex flex-col items-center text-gray-700 hover:text-primary"
 				>
 					<svg class="w-6 h-6 fill-current" viewBox="0 0 512 512">
@@ -40,7 +42,8 @@
 				<a
 					target="_blank"
 					href="https://github.com/carlosarroyoam/"
-					rel="nofollow"
+					rel="noreferrer"
+					aria-label="Carlos Alberto Arroyo Martínez's github profile"
 					class="flex flex-col items-center text-gray-700 hover:text-primary"
 				>
 					<svg class="w-6 h-6 fill-current" viewBox="0 0 512 512">
