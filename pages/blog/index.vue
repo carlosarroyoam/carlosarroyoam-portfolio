@@ -15,13 +15,11 @@
 </template>
 
 <script>
-import ArticlesList from '~/components/blog/ArticlesList';
-
 export default {
 	name: 'Blog',
 	layout: 'app',
 	components: {
-		ArticlesList
+		ArticlesList: () => import('@/components/blog/ArticlesList')
 	},
 	head() {
 		return {

@@ -13,13 +13,12 @@
 </template>
 
 <script>
-import TechnologiesCard from '~/components/about-me/TechnologiesCard';
 import technichalSkillsJson from '~/data/technical_skills.json';
 
 export default {
 	name: 'TheTechnologiesResume',
 	components: {
-		TechnologiesCard
+		TechnologiesCard: () => import('@/components/about-me/TechnologiesCard')
 	},
 	data() {
 		return {

@@ -6,20 +6,17 @@
 	</section>
 </template>
 
-
 <script>
-import ProjectCard from '~/components/portfolio/ProjectCard';
-
 export default {
 	name: 'ProjectsList',
 	components: {
-		ProjectCard,
+		ProjectCard: () => import('@/components/portfolio/ProjectCard')
 	},
 	props: {
 		projects: {
 			type: Object,
-			required: true,
-		},
-	},
+			required: true
+		}
+	}
 };
 </script>

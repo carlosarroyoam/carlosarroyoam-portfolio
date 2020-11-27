@@ -26,13 +26,11 @@
 </template>
 
 <script>
-import ProjectsList from '~/components/portfolio/ProjectsList';
-
 export default {
 	name: 'Portfolio',
 	layout: 'app',
 	components: {
-		ProjectsList
+		ProjectsList: () => import('@/components/portfolio/ProjectsList')
 	},
 	data() {
 		return {};

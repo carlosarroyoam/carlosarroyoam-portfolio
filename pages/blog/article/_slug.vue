@@ -15,39 +15,45 @@
 </template>
 
 <script>
-import Author from '~/components/blog/Author';
-
 export default {
 	name: 'Article',
 	layout: 'app',
 	components: {
-		Author,
+		Author: () => import('@/components/blog/Author')
 	},
 	methods: {
 		formatDate(date) {
 			const options = { year: 'numeric', month: 'long', day: 'numeric' };
 			return new Date(date).toLocaleDateString('es-mx', options);
-		},
+		}
 	},
 	head() {
 		return {
 			title: this.article.title,
 			meta: [
-				{ hid: 'description', name: 'description', content: this.article.description },
+				{
+					hid: 'description',
+					name: 'description',
+					content: this.article.description
+				},
 				{
 					hid: 'keywords',
 					name: 'keywords',
-					content: ['Blog de desarrollo web', 'Blog de tecnología', 'Blog de programación'],
-				},
-			],
+					content: [
+						'Blog de desarrollo web',
+						'Blog de tecnología',
+						'Blog de programación'
+					]
+				}
+			]
 		};
 	},
 	async asyncData({ $content, params }) {
 		const article = await $content('articles', params.slug).fetch();
 
 		return {
-			article,
+			article
 		};
-	},
+	}
 };
 </script>

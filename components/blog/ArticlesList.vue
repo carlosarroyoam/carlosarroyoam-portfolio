@@ -6,20 +6,17 @@
 	</section>
 </template>
 
-
 <script>
-import ArticleCard from '~/components/blog/ArticleCard';
-
 export default {
 	name: 'ArticlesList',
 	components: {
-		ArticleCard,
+		ArticleCard: () => import('@/components/blog/ArticleCard')
 	},
 	props: {
 		articles: {
 			type: Array,
-			required: true,
-		},
-	},
+			required: true
+		}
+	}
 };
 </script>

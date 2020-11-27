@@ -11,6 +11,7 @@
 				>
 				<a
 					href="mailto:carlosarroyoam@gmail.com"
+					rel="noreferrer"
 					class="inline-flex items-center flex-grow-0 px-4 py-2 mt-6 text-base text-center text-gray-100 uppercase rounded bg-primary"
 				>
 					Enviar un email
@@ -28,13 +29,12 @@
 </template>
 
 <script>
-import TheSocialContainer from '~/components/contact-me/TheSocialContainer';
-
 export default {
 	name: 'ContactMe',
 	layout: 'app',
 	components: {
-		TheSocialContainer
+		TheSocialContainer: () =>
+			import('@/components/contact-me/TheSocialContainer')
 	},
 	head() {
 		return {
