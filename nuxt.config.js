@@ -125,17 +125,10 @@ export default {
 	modules: [
 		'nuxt-i18n',
 		'nuxt-purgecss',
-		// Doc: https://axios.nuxtjs.org/usage
-		'@nuxtjs/axios',
 		// Doc: https://github.com/nuxt/content
 		'@nuxt/content',
 		'@nuxtjs/sitemap'
 	],
-	/*
-	 ** Axios module configuration
-	 ** See https://axios.nuxtjs.org/options
-	 */
-	axios: {},
 	/*
 	 ** Content module configuration
 	 ** See https://content.nuxtjs.org/configuration
