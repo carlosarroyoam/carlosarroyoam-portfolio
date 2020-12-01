@@ -7,7 +7,7 @@
 				<span class="text-sm font-medium text-gray-900 uppercase font-display"
 					>Carlos Alberto Arroyo Martínez</span
 				>
-				<span class="text-sm font-normal text-gray-700 font-body"
+				<span class="text-sm font-normal font-body"
 					>Copyright © 2020 Todos los derechos reservados.</span
 				>
 			</small>
@@ -16,7 +16,7 @@
 				<a
 					href="mailto:carlosarroyoam@gmail.com"
 					aria-label="Send a email to Carlos Alberto Arroyo Martínez"
-					class="flex flex-col items-center text-gray-700 hover:text-primary"
+					class="flex flex-col items-center hover:text-primary"
 				>
 					<svg class="w-6 h-6 mr-1 fill-current" viewBox="0 0 512 512">
 						<path
@@ -30,7 +30,7 @@
 					href="https://www.linkedin.com/in/carlosarroyoam/"
 					rel="noreferrer"
 					aria-label="Carlos Alberto Arroyo Martínez's linkedin profile"
-					class="flex flex-col items-center text-gray-700 hover:text-primary"
+					class="flex flex-col items-center hover:text-primary"
 				>
 					<svg class="w-6 h-6 fill-current" viewBox="0 0 512 512">
 						<path
@@ -44,7 +44,7 @@
 					href="https://github.com/carlosarroyoam/"
 					rel="noreferrer"
 					aria-label="Carlos Alberto Arroyo Martínez's github profile"
-					class="flex flex-col items-center text-gray-700 hover:text-primary"
+					class="flex flex-col items-center hover:text-primary"
 				>
 					<svg class="w-6 h-6 fill-current" viewBox="0 0 512 512">
 						<path

@@ -8,7 +8,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				display: ['Montserrat', 'sans-serif'],
+				display: ['Montserrat', 'system-ui', 'sans-serif'],
 				body: ['Poppins', 'system-ui', 'sans-serif']
 			},
 			colors: {

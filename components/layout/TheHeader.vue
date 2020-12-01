@@ -15,7 +15,7 @@
 					>
 
 					<button
-						class="text-gray-100 lg:hidden"
+						class="lg:hidden"
 						type="button"
 						aria-label="Toggle navigation bar"
 						v-on:click="toggleNavbar()"

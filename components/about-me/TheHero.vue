@@ -1,6 +1,6 @@
 <template>
 	<section class="relative flex flex-col">
-		<small class="text-xs tracking-widest text-gray-800 uppercase font-body"
+		<small class="text-xs tracking-widest uppercase font-body"
 			>presentación</small
 		>
 		<app-display>Desarrollador de Software</app-display>
@@ -15,7 +15,7 @@
 		<div class="flex items-center mt-6">
 			<app-button href="portfolio">Ver mi portafolio</app-button>
 
-			<app-link href="resume" class="ml-6 text-gray-800" type="secondary"
+			<app-link href="resume" class="ml-6" type="secondary"
 				>Descargar CV</app-link
 			>
 		</div>
