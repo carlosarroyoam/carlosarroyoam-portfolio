@@ -14,7 +14,7 @@ export default {
 	 */
 	router: {
 		trailingSlash: true,
-		linkActiveClass: 'text-gray-100 font-medium tracking-wide'
+		linkActiveClass: 'text-white'
 	},
 	/*
 	 ** Global CSS

@@ -1,8 +1,6 @@
 <template>
 	<section class="relative flex flex-col">
-		<small class="text-xs tracking-widest uppercase font-body"
-			>presentación</small
-		>
+		<small class="text-xs tracking-widest uppercase">presentación</small>
 		<app-display>Desarrollador de Software</app-display>
 		<app-paragraph>
 			Con más de 5 años de experiencia construyendo software que resuelve

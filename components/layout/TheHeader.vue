@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<header
-			class="fixed inset-x-0 top-0 z-40 text-gray-100 shadow bg-surface-header"
+			class="fixed inset-x-0 top-0 z-20 text-gray-400 shadow bg-surface-header"
 		>
 			<div
 				class="container flex flex-col py-2 lg:justify-between lg:items-center lg:py-4 lg:flex-row"
@@ -10,12 +10,12 @@
 					<nuxt-link
 						:to="localePath({ name: 'about-me' })"
 						tag="a"
-						class="text-sm font-medium tracking-wider uppercase font-display sm:text-base lg:text-lg"
+						class="font-medium tracking-wide text-white uppercase font-display md:text-xl"
 						>Carlos Alberto Arroyo Martínez</nuxt-link
 					>
 
 					<button
-						class="lg:hidden"
+						class="text-white lg:hidden"
 						type="button"
 						aria-label="Toggle navigation bar"
 						v-on:click="toggleNavbar()"
@@ -42,7 +42,7 @@
 				</div>
 
 				<nav
-					class="text-sm text-gray-500 uppercase font-display lg:block"
+					class="lg:block"
 					id="mainNavbar"
 					v-bind:class="isOpen ? 'block' : 'hidden'"
 				>
@@ -74,7 +74,7 @@
 		</header>
 
 		<div
-			class="fixed inset-0 z-30 w-screen h-screen"
+			class="fixed inset-0 z-10 w-screen h-screen"
 			v-bind:class="isOpen ? 'block' : 'hidden'"
 			v-on:click="closeNavbar()"
 		></div>

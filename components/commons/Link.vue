@@ -2,7 +2,7 @@
 	<nuxt-link
 		:to="localePath({ name: href })"
 		tag="a"
-		class="text-sm font-medium tracking-wider text-center uppercase font-body"
+		class="text-sm font-medium tracking-wider text-center uppercase"
 		v-bind:class="{
 			['text-primary']: type === 'primary'
 		}"

@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="flex flex-col min-h-screen pt-16 antialiased text-gray-700 bg-background md:pt-24 theme-light"
+		class="flex flex-col min-h-screen pt-16 antialiased text-gray-700 font-body bg-background md:pt-24 theme-light"
 	>
 		<TheHeader />
 		<TheMain>

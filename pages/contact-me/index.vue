@@ -2,7 +2,7 @@
 	<article>
 		<div class="lg:w-6/12">
 			<header>
-				<app-heading>Conecta conmigo</app-heading>
+				<app-heading>{{ $t('nav_links.contact_me') }}</app-heading>
 				<app-paragraph class="max-w-3xl"
 					>Si tienes alguna pregunta, una oportunidad de trabajo o simplemente
 					deseas saludarme, no dudes en ponerte en contacto conmigo. A
@@ -12,7 +12,7 @@
 				<a
 					href="mailto:carlosarroyoam@gmail.com"
 					rel="noreferrer"
-					class="inline-flex items-center flex-grow-0 px-4 py-2 mt-6 text-base text-center text-gray-100 uppercase rounded bg-primary"
+					class="inline-flex items-center px-4 py-2 mt-4 text-sm font-medium tracking-wider text-white uppercase rounded bg-primary"
 				>
 					Enviar un email
 					<svg class="w-5 h-5 ml-4 fill-current" viewBox="0 0 512 512">
