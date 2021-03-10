@@ -3,8 +3,7 @@
 		<small class="text-xs tracking-widest uppercase">presentación</small>
 		<app-display>Desarrollador de Software</app-display>
 		<app-paragraph>
-			Con más de 5 años de experiencia construyendo software que resuelve
-			problemas reales. Apasionado por la tecnologia. Cuento con sólidos
+			Apasionado por la tecnologia. Cuento con sólidos
 			conocimientos en diversas tecnologias web, móviles y de bases de datos.
 			Constantemente estoy formándome, estoy abierto a aprender nuevos lenguajes
 			y adquirir más conocimientos.

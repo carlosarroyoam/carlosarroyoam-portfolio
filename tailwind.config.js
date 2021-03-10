@@ -15,7 +15,7 @@ module.exports = {
 				primary: '#3182ce',
 				background: '#eeeeee',
 				surface: {
-					default: '#e3e3e3',
+					default: '#d8d8d8',
 					secondary: '#ffffff',
 					header: '#37474f'
 				}

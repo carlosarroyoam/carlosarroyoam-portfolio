@@ -47,7 +47,7 @@
 					v-bind:class="isOpen ? 'block' : 'hidden'"
 				>
 					<ul
-						class="flex flex-col py-4 space-y-4 lg:py-0 lg:flex-row lg:space-x-6 lg:space-y-0"
+						class="flex flex-col py-4 space-y-4 lg:py-0 lg:flex-row lg:space-x-6 lg:space-y-0 "
 					>
 						<!-- About me -->
 						<app-navlink href="about-me">
